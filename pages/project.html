@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Projects - Ken Delantar | Full Stack Developer</title>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="bg-slate-50 overflow-x-hidden antialiased">
+
+<!-- Back Button -->
+<div class="fixed top-8 left-8 z-50">
+    <a href="../index.html"
+       class="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-slate-100 text-slate-900 font-['Inter'] font-medium text-sm rounded-xl transition-all shadow-lg border border-slate-200">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Back to Home
+    </a>
+</div>
+
+<!-- Main Content -->
+<div class="pt-32 pb-20 px-6 lg:px-40">
+    <!-- Header -->
+    <div class="mb-16 text-center">
+        <h1 class="text-slate-900 text-6xl font-['Space_Grotesk'] font-bold mb-4">My Projects</h1>
+        <p class="text-slate-600 font-['Inter'] text-lg max-w-2xl mx-auto">
+            A comprehensive showcase of my work, featuring both collaborative team projects and personal initiatives
+            that demonstrate my skills and passion for web development.
+        </p>
+    </div>
+
+    <!-- Filter Tags -->
+    <div class="flex justify-center gap-3 mb-16">
+        <button class="px-6 py-2 bg-indigo-600 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md hover:shadow-lg">
+            All Projects
+        </button>
+        <button class="px-6 py-2 bg-white text-slate-700 font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md hover:shadow-lg border border-slate-200">
+            Team Projects
+        </button>
+        <button class="px-6 py-2 bg-white text-slate-700 font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md hover:shadow-lg border border-slate-200">
+            Personal Projects
+        </button>
+        <button class="px-6 py-2 bg-white text-slate-700 font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md hover:shadow-lg border border-slate-200">
+            E-Commerce
+        </button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="space-y-20">
+
+        <!-- Project 1: CORE3 (Team Project) -->
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+            <div class="grid lg:grid-cols-2">
+                <!-- Images -->
+                <div class="bg-gradient-to-br from-indigo-50 to-violet-50 p-8">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="../public/images/core3/480401290_1739524306909673_5647657285082023911_n.png"
+                             alt="CORE3 Screenshot 1"
+                             class="w-full h-48 object-cover rounded-xl shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+                        <img src="../public/images/core3/480442671_1147856046476074_5434626914901438456_n.png"
+                             alt="CORE3 Screenshot 2"
+                             class="w-full h-48 object-cover rounded-xl shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+                        <img src="../public/images/core3/480804400_526114123830872_8341101495875969672_n.png"
+                             alt="CORE3 Screenshot 3"
+                             class="w-full h-48 object-cover rounded-xl shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+                        <img src="../public/images/core3/481145056_631311779494107_3770088957523355159_n.png"
+                             alt="CORE3 Screenshot 4"
+                             class="w-full h-48 object-cover rounded-xl shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="p-8 lg:p-12 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 font-['Inter'] text-xs font-semibold rounded-full">TEAM PROJECT</span>
+                        <span class="px-3 py-1 bg-violet-100 text-violet-700 font-['Inter'] text-xs font-semibold rounded-full">CAPSTONE</span>
+                    </div>
+
+                    <h2 class="text-slate-900 text-3xl font-['Space_Grotesk'] font-bold mb-3">
+                        E-Commerce Core Transaction System
+                    </h2>
+
+                    <p class="text-slate-600 font-['Inter'] text-base mb-6 leading-relaxed">
+                        A comprehensive e-commerce platform with integrated analytics dashboard, designed to track
+                        customer behavior and provide actionable insights for business growth. Built as a capstone
+                        project with a focus on scalability and user experience.
+                    </p>
+
+                    <!-- Team Members -->
+                    <div class="mb-6">
+                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Team Members</h3>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
+                                KD
+                            </div>
+                            <div class="w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
+                                JM
+                            </div>
+                            <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
+                                RS
+                            </div>
+                            <span class="text-slate-500 font-['Inter'] text-sm ml-2">+ 2 more</span>
+                        </div>
+                    </div>
+
+                    <!-- Technologies -->
+                    <div class="mb-6">
+                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Technologies
+                            Used</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Laravel</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">PHP</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">MySQL</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Stripe API</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="mb-6">
+                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Key Features</h3>
+                        <ul class="space-y-2 text-slate-600 font-['Inter'] text-sm">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-indigo-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Customer behavior analytics and trends dashboard</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-indigo-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Secure payment processing with Stripe integration</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-indigo-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Admin panel for content and inventory management</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="flex gap-3">
+                        <a href="#"
+                           class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md">
+                            View Demo
+                        </a>
+                        <a href="#"
+                           class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-['Inter'] font-medium text-sm rounded-lg transition-all border border-slate-200">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2: File Management (Team Project - OJT) -->
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+            <div class="grid lg:grid-cols-2">
+                <!-- Content (Left side for this one) -->
+                <div class="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-violet-100 text-violet-700 font-['Inter'] text-xs font-semibold rounded-full">TEAM PROJECT</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-700 font-['Inter'] text-xs font-semibold rounded-full">OJT PROJECT</span>
+                    </div>
+
+                    <h2 class="text-slate-900 text-3xl font-['Space_Grotesk'] font-bold mb-3">
+                        File Management System
+                    </h2>
+
+                    <p class="text-slate-600 font-['Inter'] text-base mb-6 leading-relaxed">
+                        Digital file management solution developed for the Registrar Office at Bestlink College of the
+                        Philippines. Streamlines document storage, retrieval, and organization for student records with
+                        role-based access control.
+                    </p>
+
+                    <!-- Team Members -->
+                    <div class="mb-6">
+                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Team Members</h3>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
+                                KD
+                            </div>
+                            <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
+                                AL
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technologies -->
+                    <div class="mb-6">
+                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Technologies
+                            Used</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Laravel</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">PHP</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">MySQL</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">jQuery</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="mb-6">
+                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Key Features</h3>
+                        <ul class="space-y-2 text-slate-600 font-['Inter'] text-sm">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-violet-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                <span>User authentication with role-based permissions</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-violet-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Advanced search and filter functionality</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-violet-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Secure document storage and retrieval system</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="flex gap-3">
+                        <a href="#"
+                           class="px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md">
+                            View Case Study
+                        </a>
+                        <a href="#"
+                           class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-['Inter'] font-medium text-sm rounded-lg transition-all border border-slate-200">
+                            Documentation
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image Placeholder -->
+                <div class="bg-gradient-to-br from-violet-50 to-purple-50 p-8 order-1 lg:order-2 flex items-center justify-center min-h-[400px]">
+                    <div class="text-center">
+                        <svg class="w-32 h-32 mx-auto text-violet-300 mb-4" fill="none" stroke="currentColor"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <p class="text-violet-400 font-['Space_Grotesk'] text-lg">File Management System</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3: MDesserts (Personal Project) -->
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+            <div class="grid lg:grid-cols-2">
+                <!-- Image Placeholder -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 flex items-center justify-center min-h-[400px]">
+                    <div class="text-center">
+                        <svg class="w-32 h-32 mx-auto text-blue-300 mb-4" fill="none" stroke="currentColor"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <p class="text-blue-400 font-['Space_Grotesk'] text-lg">MDesserts E-Commerce</p>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="p-8 lg:p-12 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 font-['Inter'] text-xs font-semibold rounded-full">PERSONAL PROJECT</span>
+                        <span class="px-3 py-1 bg-amber-100 text-amber-700 font-['Inter'] text-xs font-semibold rounded-full">E-COMMERCE</span>
+                    </div>
+
+                    <h2 class="text-slate-900 text-3xl font-['Space_Grotesk'] font-bold mb-3">
+                        MDesserts E-Commerce Platform
+                    </h2>
+
+                    <p class="text-slate-600 font-['Inter'] text-base mb-6 leading-relaxed">
+                        A fully functional online dessert store with modern UI and seamless payment integration.
+                        Features product catalog, cart management, order tracking, and responsive design optimized for
+                        all devices.
+                    </p>
+
+                    <!-- Solo Project Badge -->
+                    <div class="mb-6">
+                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Project Role</h3>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
+                                KD
+                            </div>
+                            <span class="text-slate-600 font-['Inter'] text-sm">Solo Developer - Full Stack</span>
+                        </div>
+                    </div>
+
+                    <!-- Technologies -->
+                    <div class="mb-6">
+                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Technologies
+                            Used</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Laravel</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">PHP</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">MySQL</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Stripe API</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Tailwind CSS</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="mb-6">
+                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Key Features</h3>
+                        <ul class="space-y-2 text-slate-600 font-['Inter'] text-sm">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                <span>User registration and authentication system</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Integrated Stripe payment gateway</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Responsive design with mobile-friendly layout</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="flex gap-3">
+                        <a href="#"
+                           class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md">
+                            Live Demo
+                        </a>
+                        <a href="#"
+                           class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-['Inter'] font-medium text-sm rounded-lg transition-all border border-slate-200">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4: Portfolio Website (Personal Project) -->
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+            <div class="grid lg:grid-cols-2">
+                <!-- Content -->
+                <div class="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-700 font-['Inter'] text-xs font-semibold rounded-full">PERSONAL PROJECT</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 font-['Inter'] text-xs font-semibold rounded-full">WEB DESIGN</span>
+                    </div>
+
+                    <h2 class="text-slate-900 text-3xl font-['Space_Grotesk'] font-bold mb-3">
+                        Personal Portfolio Website
+                    </h2>
+
+                    <p class="text-slate-600 font-['Inter'] text-base mb-6 leading-relaxed">
+                        A modern, futuristic portfolio website showcasing my projects, skills, and experience. Features
+                        smooth animations, responsive design, and an intuitive user experience with both light and dark
+                        themes.
+                    </p>
+
+                    <!-- Solo Project Badge -->
+                    <div class="mb-6">
+                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Project Role</h3>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
+                                KD
+                            </div>
+                            <span class="text-slate-600 font-['Inter'] text-sm">Designer & Developer</span>
+                        </div>
+                    </div>
+
+                    <!-- Technologies -->
+                    <div class="mb-6">
+                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Technologies
+                            Used</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Vite</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Vanilla JS</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">HTML5</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="mb-6">
+                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Key Features</h3>
+                        <ul class="space-y-2 text-slate-600 font-['Inter'] text-sm">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-emerald-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Smooth animations and transitions</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-emerald-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Fully responsive across all devices</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-emerald-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Dark and light theme variations</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="flex gap-3">
+                        <a href="../index.html"
+                           class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md">
+                            You're Here!
+                        </a>
+                        <a href="#"
+                           class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-['Inter'] font-medium text-sm rounded-lg transition-all border border-slate-200">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image Placeholder -->
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 order-1 lg:order-2 flex items-center justify-center min-h-[400px]">
+                    <div class="text-center">
+                        <svg class="w-32 h-32 mx-auto text-emerald-300 mb-4" fill="none" stroke="currentColor"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <p class="text-emerald-400 font-['Space_Grotesk'] text-lg">Portfolio Website</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-slate-900 py-12 px-6 lg:px-40 mt-20">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-slate-400 font-['Inter'] text-sm text-center md:text-left">
+            &copy; 2025 Ken Delantar. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+            <a href="https://github.com/kendelantar" target="_blank"
+               class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">GitHub</a>
+            <a href="https://www.linkedin.com/in/kendelantar" target="_blank"
+               class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">LinkedIn</a>
+            <a href="mailto:its.kendelantar@gmail.com"
+               class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Email</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

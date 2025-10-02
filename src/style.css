@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Define CSS variables for fonts */
+@theme {
+  --font-headings: "Poppins", sans-serif;
+  --font-sans: "Roboto", sans-serif;
+}
+
+body {
+  @apply antialiased;
+}
+
+.bg-primary {
+  @apply bg-[#EEEEED];
+}
+
+.btn-primary {
+  @apply px-10 py-3 rounded bg-neutral-900 text-white text-xs font-mono font-medium hover:bg-neutral-500;
+}
+
+.btn-secondary {
+  @apply px-10 py-3 rounded bg-white text-neutral-900 text-xs font-mono font-medium hover:bg-neutral-200;
+}
+
+.btn-tertiary{
+  @apply px-10 py-3 rounded bg-rose-600 text-white text-xs font-mono font-medium hover:bg-rose-800;
+}

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ken Delantar - Full Stack Developer</title>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="bg-slate-50 overflow-x-hidden antialiased">
+<div class="relative">
+    <header class="fixed top-0 left-0 w-full flex justify-between py-4 px-7 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <h1 class="inline-flex flex-col">
+        <span class="font-medium font-['Space_Grotesk'] text-xs text-slate-600 uppercase tracking-[0.2em]">
+          DELANTAR
+        </span>
+
+            <span class="font-bold font-['Space_Grotesk'] text-2xl text-slate-900">
+          KEN
+        </span>
+        </h1>
+
+        <button onclick="menu.hidden^=1"
+                class="font-['Inter'] text-sm font-medium text-slate-900 hover:text-indigo-600 transition-colors">
+            MENU
+        </button>
+    </header>
+
+    <!--    Hero section    -->
+    <section class="h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 content-center">
+        <div class="grid lg:grid-cols-2 lg:px-20">
+            <div class="col-span-1 ">
+                <h1 class="text-3xl text-indigo-300 font-['Space_Grotesk'] font-medium tracking-wider">DELANTAR</h1>
+                <h1 class="text-7xl text-white font-['Space_Grotesk'] font-bold">KEN</h1>
+                <div class="relative h-20">
+                    <h1 id="role-text"
+                        class="text-5xl text-indigo-200 font-['Inter'] font-light mt-4 transition-opacity duration-700 ease-in-out tracking-tight">
+                        Front-end Developer
+                    </h1>
+                </div>
+
+                <script>
+                    const roles = ["Front-end Developer", "Back-end Developer", "Full Stack Developer"];
+                    let index = 0;
+                    const roleText = document.getElementById("role-text");
+
+                    setInterval(() => {
+                        roleText.classList.add("opacity-0");
+
+                        setTimeout(() => {
+                            index = (index + 1) % roles.length;
+                            roleText.textContent = roles[index];
+                            roleText.classList.remove("opacity-0");
+                        }, 700);
+                    }, 3000);
+                </script>
+
+
+                <div class="inline-flex gap-3 mt-2">
+                    <button class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50">
+                        DOWNLOAD CV
+                    </button>
+
+                    <a href="pages/profile.html"
+                       class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all border border-white/20 backdrop-blur-sm">
+                        VIEW PROFILE
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-span-1 flex flex-col justify-center space-y-8">
+                <!-- Stats Summary -->
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-all">
+                        <h3 class="text-4xl font-bold text-white font-['Space_Grotesk']">3+</h3>
+                        <p class="text-indigo-300 font-['Inter'] text-sm mt-1">Projects Completed</p>
+                    </div>
+
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-all">
+                        <h3 class="text-4xl font-bold text-white font-['Space_Grotesk']">2+</h3>
+                        <p class="text-indigo-300 font-['Inter'] text-sm mt-1">Years Experience</p>
+                    </div>
+
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-all">
+                        <h3 class="text-4xl font-bold text-white font-['Space_Grotesk']">10+</h3>
+                        <p class="text-indigo-300 font-['Inter'] text-sm mt-1">Technologies</p>
+                    </div>
+
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-all">
+                        <h3 class="text-4xl font-bold text-white font-['Space_Grotesk']">100%</h3>
+                        <p class="text-indigo-300 font-['Inter'] text-sm mt-1">Client Satisfaction</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h2 class="text-indigo-300 font-['Space_Grotesk'] font-medium text-lg uppercase tracking-wider">
+                        Connect With Me
+                    </h2>
+
+                    <div class="space-y-4">
+                        <a href="https://github.com/kendelantar"
+                           target="_blank"
+                           class="flex items-center gap-4 text-white hover:text-indigo-400 transition-colors group">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-indigo-600 transition-all">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-['Inter'] text-sm text-slate-400">GitHub</p>
+                                <p class="font-['Inter'] font-medium">@kendelantar</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/kendelantar"
+                           target="_blank"
+                           class="flex items-center gap-4 text-white hover:text-indigo-400 transition-colors group">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-indigo-600 transition-all">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-['Inter'] text-sm text-slate-400">LinkedIn</p>
+                                <p class="font-['Inter'] font-medium">Ken Delantar</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.facebook.com/kendelantar"
+                           target="_blank"
+                           class="flex items-center gap-4 text-white hover:text-indigo-400 transition-colors group">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-indigo-600 transition-all">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-['Inter'] text-sm text-slate-400">Facebook</p>
+                                <p class="font-['Inter'] font-medium">Ken Delantar</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:its.kendelantar@gmail.com"
+                           class="flex items-center gap-4 text-white hover:text-indigo-400 transition-colors group">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-indigo-600 transition-all">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-['Inter'] text-sm text-slate-400">Email</p>
+                                <p class="font-['Inter'] font-medium text-sm">its.kendelantar@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="min-h-screen content-center bg-white py-20">
+        <div class="grid lg:grid-cols-2 mt-10 lg:px-40 lg:py-10 p-4 gap-10 content-center">
+            <div class="col-span-1 space-y-6">
+                <h1 class="text-slate-900 text-5xl font-['Space_Grotesk'] font-bold mb-8">About Me</h1>
+
+                <p class="text-xl text-slate-700 font-['Inter'] font-medium mb-6">
+                    Hello there, 👋
+                </p>
+
+                <p class="mb-6 text-base text-slate-600 font-['Inter'] leading-relaxed">
+                    I'm Ken Jayson Delantar, a college graduate with a Bachelor of Science in Information Technology,
+                    majoring in Information Management. I am an aspiring Full Stack Developer with hands-on experience
+                    and
+                    skills in
+                    Laravel, PHP, SQL, and software architecture. I enjoy building scalable and efficient web
+                    applications, and
+                    I
+                    constantly seek to improve my coding practices and stay updated with the latest technologies.
+                </p>
+
+                <p class="mb-6 text-base text-slate-600 font-['Inter'] leading-relaxed">
+                    Beyond programming, I have a passion for creative hobbies such as watching movies and series,
+                    exploring
+                    music,
+                    and learning about design and user experiences. I believe that a balance of work and personal
+                    interests
+                    fuels
+                    creativity and innovation in tech projects.
+                </p>
+
+                <p class="text-base text-slate-600 font-['Inter'] leading-relaxed">
+                    I am always eager to collaborate on exciting projects, take on challenges, and contribute to
+                    building
+                    solutions
+                    that have a meaningful impact.
+                </p>
+            </div>
+
+            <div class="col-span-1 flex items-center justify-center">
+                <div class="w-full h-96 bg-gradient-to-br from-indigo-100 to-violet-100 rounded-2xl flex items-center justify-center">
+                    <span class="text-indigo-400 font-['Space_Grotesk'] text-2xl font-medium">Profile Image</span>
+                </div>
+            </div>
+
+            <hr class="border-indigo-200 col-span-2 border-t-2 mt-16 mb-12">
+
+            <div class="col-span-2 grid lg:grid-cols-3 gap-12 px-5">
+                <div class="col-span-1">
+                    <h1 class="text-xl font-['Space_Grotesk'] font-semibold text-slate-900 mb-5">Education</h1>
+                    <ul class="list-none space-y-3 text-sm text-slate-600 font-['Inter'] leading-relaxed">
+                        <li class="pl-4 border-l-2 border-indigo-300">Bachelor of Science in Information Technology,
+                            major in Information Management at Bestlink College of
+                            the Philippines
+                        </li>
+                        <li class="pl-4 border-l-2 border-indigo-300">Information and Communication Technology, major in
+                            Software Development at Bestlink College of the
+                            Philippines
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1">
+                    <h1 class="text-xl font-['Space_Grotesk'] font-semibold text-slate-900 mb-5">Hobbies &
+                        Interests</h1>
+                    <ul class="list-none space-y-3 text-sm text-slate-600 font-['Inter'] leading-relaxed">
+                        <li class="pl-4 border-l-2 border-violet-300">Watching movies and series</li>
+                        <li class="pl-4 border-l-2 border-violet-300">Exploring music and creative arts</li>
+                        <li class="pl-4 border-l-2 border-violet-300">Learning about design, user experience, and tech
+                            trends
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1">
+                    <h1 class="text-xl font-['Space_Grotesk'] font-semibold text-slate-900 mb-5">Goals &
+                        Collaboration</h1>
+                    <ul class="list-none space-y-3 text-sm text-slate-600 font-['Inter'] leading-relaxed">
+                        <li class="pl-4 border-l-2 border-blue-300">Eager to collaborate on exciting projects</li>
+                        <li class="pl-4 border-l-2 border-blue-300">Open to challenges and problem-solving
+                            opportunities
+                        </li>
+                        <li class="pl-4 border-l-2 border-blue-300">Committed to building impactful and meaningful
+                            solutions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-50 py-20 lg:px-40 lg:py-20 px-6">
+        <div class="mb-16">
+            <h1 class="text-slate-900 text-5xl font-['Space_Grotesk'] font-bold mb-4">Featured Projects</h1>
+            <p class="text-slate-600 font-['Inter'] text-lg">A selection of my recent work</p>
+        </div>
+
+        <div class="space-y-20">
+            <!-- Project 01 -->
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+                <div class="col-span-1 bg-gradient-to-br from-indigo-100 to-violet-100 p-6 rounded-2xl">
+                    <div class="grid grid-cols-2 gap-3">
+                        <img src="./public/images/core3/480804400_526114123830872_8341101495875969672_n.png"
+                             alt="CORE3 Screenshot 3"
+                             class="w-full h-48 object-cover rounded-lg shadow-md">
+                        <img src="./public/images/core3/481145056_631311779494107_3770088957523355159_n.png"
+                             alt="CORE3 Screenshot 4"
+                             class="w-full h-48 object-cover rounded-lg shadow-md">
+                        <img src="./public/images/core3/481666446_1141534784271573_6082360184541191417_n.png"
+                             alt="CORE3 Screenshot 5"
+                             class="w-full h-48 object-cover rounded-lg shadow-md">
+                        <img src="./public/images/core3/482034659_1996937364123510_6491390651587333575_n.png"
+                             alt="CORE3 Screenshot 6"
+                             class="w-full h-48 object-cover rounded-lg shadow-md">
+                    </div>
+                </div>
+
+                <div class="col-span-1 flex flex-col gap-6 h-fit">
+                    <div class="inline-flex items-baseline gap-4">
+                        <span class="text-indigo-200 text-6xl font-bold font-['Space_Grotesk']">01</span>
+                        <h2 class="text-slate-900 text-2xl font-['Space_Grotesk'] font-bold leading-tight">
+                            E-COMMERCE CORE TRANSACTION
+                        </h2>
+                    </div>
+
+                    <p class="text-slate-600 font-['Inter'] text-base leading-relaxed">
+                        Content Management with Customer Behavior and Trends Analytics
+                    </p>
+
+                    <ul class="space-y-3 text-slate-600 font-['Inter'] text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-500 mt-1">✓</span>
+                            <span>Capstone project completed during my final year at BCP</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-500 mt-1">✓</span>
+                            <span>Developed using Laravel and PHP with MySQL database</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-500 mt-1">✓</span>
+                            <span>Integrated Stripe Payment API for secure transactions</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-500 mt-1">✓</span>
+                            <span>Implemented customer behavior analytics and trends dashboard</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-500 mt-1">✓</span>
+                            <span>Admin panel with content management, orders, and inventory tracking</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Project 02 -->
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+                <div class="col-span-1 order-2 lg:order-1 flex flex-col gap-6">
+                    <div class="inline-flex items-baseline gap-4">
+                        <span class="text-violet-200 text-6xl font-bold font-['Space_Grotesk']">02</span>
+                        <h2 class="text-slate-900 text-2xl font-['Space_Grotesk'] font-bold leading-tight">
+                            FILE MANAGEMENT SYSTEM
+                        </h2>
+                    </div>
+
+                    <ul class="space-y-3 text-slate-600 font-['Inter'] text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-500 mt-1">✓</span>
+                            <span>Developed during on-the-job training at Registrar Office, BCP</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-500 mt-1">✓</span>
+                            <span>Built with Laravel, PHP, and MySQL</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-500 mt-1">✓</span>
+                            <span>Digital storage, retrieval, and organization of student files</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-500 mt-1">✓</span>
+                            <span>User authentication with role-based permissions</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-500 mt-1">✓</span>
+                            <span>Search and filter features for quick document management</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1 order-1 lg:order-2 bg-gradient-to-br from-violet-100 to-purple-100 p-8 rounded-2xl min-h-[400px] flex items-center justify-center">
+                    <span class="text-violet-400 font-['Space_Grotesk'] text-xl">Project Screenshot</span>
+                </div>
+            </div>
+
+            <!-- Project 03 -->
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+                <div class="col-span-1 bg-gradient-to-br from-blue-100 to-indigo-100 p-8 rounded-2xl min-h-[400px] flex items-center justify-center">
+                    <span class="text-blue-400 font-['Space_Grotesk'] text-xl">Project Screenshot</span>
+                </div>
+
+                <div class="col-span-1 flex flex-col gap-6">
+                    <div class="inline-flex items-baseline gap-4">
+                        <span class="text-blue-200 text-6xl font-bold font-['Space_Grotesk']">03</span>
+                        <h2 class="text-slate-900 text-2xl font-['Space_Grotesk'] font-bold leading-tight">
+                            E-COMMERCE WEB APPLICATION (MDesserts)
+                        </h2>
+                    </div>
+
+                    <ul class="space-y-3 text-slate-600 font-['Inter'] text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-500 mt-1">✓</span>
+                            <span>Web application for an online dessert store</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-500 mt-1">✓</span>
+                            <span>Developed using Laravel, PHP, and MySQL</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-500 mt-1">✓</span>
+                            <span>Integrated Stripe API for seamless payment processing</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-500 mt-1">✓</span>
+                            <span>User registration, product catalog, and order tracking</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-500 mt-1">✓</span>
+                            <span>Responsive design with modern UI and mobile-friendly layout</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center gap-4 mt-16">
+            <a href="pages/project.html"
+               class="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-lg shadow-indigo-500/30">
+                VIEW ALL PROJECTS
+            </a>
+            <button class="px-8 py-3 bg-white hover:bg-slate-50 text-slate-900 font-['Inter'] font-medium text-sm rounded-lg transition-all border border-slate-300">
+                GITHUB
+            </button>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 lg:px-40 lg:py-16 px-6 py-12">
+        <div class="flex flex-wrap justify-between items-start gap-10">
+            <div class="h-fit">
+                <h1 class="inline-flex flex-col mb-4">
+                    <span class="font-medium font-['Space_Grotesk'] text-lg text-indigo-400 uppercase tracking-[0.2em]">
+                        DELANTAR
+                    </span>
+                    <span class="font-bold font-['Space_Grotesk'] text-5xl text-white">
+                        KEN
+                    </span>
+                </h1>
+                <p class="text-slate-400 font-['Inter'] text-sm max-w-xs">
+                    Full Stack Developer passionate about building elegant solutions to complex problems.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <h1 class="text-white text-sm font-['Space_Grotesk'] font-semibold uppercase tracking-wider">Quick
+                    Links</h1>
+                <ul class="text-slate-400 font-['Inter'] text-sm space-y-3">
+                    <li><a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a></li>
+                    <li><a href="/pages/project.html" class="hover:text-indigo-400 transition-colors">Projects</a></li>
+                    <li><a href="/pages/skill.html" class="hover:text-indigo-400 transition-colors">Skills</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h1 class="text-white text-sm font-['Space_Grotesk'] font-semibold uppercase tracking-wider">
+                    Contact</h1>
+                <div class="space-y-3 font-['Inter']">
+                    <a href="mailto:its.kendelantar@gmail.com"
+                       class="flex items-start gap-3 text-sm hover:text-indigo-400 transition-colors">
+                        <span class="text-slate-500">Email:</span>
+                        <span class="text-slate-400">its.kendelantar@gmail.com</span>
+                    </a>
+                    <a href="#" class="flex items-start gap-3 text-sm hover:text-indigo-400 transition-colors">
+                        <span class="text-slate-500">Facebook:</span>
+                        <span class="text-slate-400">Ken Delantar</span>
+                    </a>
+                    <a href="tel:+639851066388"
+                       class="flex items-start gap-3 text-sm hover:text-indigo-400 transition-colors">
+                        <span class="text-slate-500">Phone:</span>
+                        <span class="text-slate-400">+63 9851066388</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-slate-800 mt-12 pt-8">
+            <p class="text-slate-500 text-center font-['Inter'] text-sm">
+                &copy; 2025 Ken Delantar. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Overlay Menu -->
+    <menu id="menu" hidden
+          class="h-screen w-screen bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 fixed z-50 top-0 left-0">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:px-24 lg:py-24 p-10 relative h-full">
+            <button onclick="menu.hidden^=1"
+                    class="absolute top-8 right-8 text-white font-['Inter'] font-medium text-sm hover:text-indigo-200 transition-colors px-6 py-3 border border-white/30 rounded-lg backdrop-blur-sm">
+                CLOSE
+            </button>
+
+            <div class="flex flex-col justify-between">
+                <div>
+                    <h1 class="inline-flex flex-col mb-16">
+                        <span class="font-['Space_Grotesk'] text-white text-5xl font-medium tracking-[0.25em] uppercase">Delantar</span>
+                        <span class="font-['Space_Grotesk'] text-white text-[8rem] font-bold leading-none">Ken</span>
+                    </h1>
+
+                    <div class="mt-20">
+                        <p class="font-['Space_Grotesk'] text-white/80 text-2xl font-semibold mb-4 tracking-wide uppercase">
+                            Address</p>
+                        <p class="font-['Inter'] text-white text-lg leading-relaxed">Brgy. 176, Caloocan City</p>
+                        <p class="font-['Inter'] text-white text-lg leading-relaxed">Philippines, 1428</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-center">
+                <ul class="space-y-8 text-right">
+                    <li><a href="index.html"
+                           class="font-['Space_Grotesk'] text-white text-6xl font-bold tracking-tight hover:text-indigo-200 transition-colors inline-block">Home</a>
+                    </li>
+                    <li><a href="/pages/project.html"
+                           class="font-['Space_Grotesk'] text-white text-6xl font-bold tracking-tight hover:text-indigo-200 transition-colors inline-block">Projects</a>
+                    </li>
+                    <li><a href="/pages/skill.html"
+                           class="font-['Space_Grotesk'] text-white text-6xl font-bold tracking-tight hover:text-indigo-200 transition-colors inline-block">Skills</a>
+                    </li>
+                    <li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="absolute bottom-8 left-0 w-full px-10 text-white/70 flex justify-between items-center text-xs uppercase tracking-widest font-['Inter']">
+            <p>&copy; 2025 Ken Delantar. All rights reserved.</p>
+            <div class="flex space-x-8">
+                <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-white transition-colors">GitHub</a>
+                <a href="#" class="hover:text-white transition-colors">Email</a>
+            </div>
+        </footer>
+    </menu>
+</div>
+</body>
+
+</html>

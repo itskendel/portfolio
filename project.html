@@ -11,12 +11,26 @@
     <script type="module" src="/src/main.js"></script>
 </head>
 
-<body class="bg-slate-50 overflow-x-hidden antialiased">
+<body class="bg-slate-900 antialiased">
+
+<!-- Fixed Background Image Container -->
+<div id="background-container" class="fixed inset-0 z-0 transition-opacity duration-700">
+    <div id="bg-project-1"
+         class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-600 to-violet-700 opacity-100 transition-opacity duration-700"></div>
+    <div id="bg-project-2"
+         class="absolute inset-0 bg-gradient-to-br from-violet-600 via-purple-600 to-pink-700 opacity-0 transition-opacity duration-700"></div>
+    <div id="bg-project-3"
+         class="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-cyan-700 opacity-0 transition-opacity duration-700"></div>
+    <div id="bg-project-4"
+         class="absolute inset-0 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700 opacity-0 transition-opacity duration-700"></div>
+    <!-- Overlay for readability -->
+    <div class="absolute inset-0 bg-black/20"></div>
+</div>
 
 <!-- Back Button -->
 <div class="fixed top-8 left-8 z-50">
-    <a href="../index.html"
-       class="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-slate-100 text-slate-900 font-['Inter'] font-medium text-sm rounded-xl transition-all shadow-lg border border-slate-200">
+    <a href="index.html"
+       class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-['Inter'] font-medium text-sm rounded-xl transition-all backdrop-blur-md border border-white/20">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
@@ -25,474 +39,524 @@
     </a>
 </div>
 
-<!-- Main Content -->
-<div class="pt-32 pb-20 px-6 lg:px-40">
-    <!-- Header -->
-    <div class="mb-16 text-center">
-        <h1 class="text-slate-900 text-6xl font-['Space_Grotesk'] font-bold mb-4">My Projects</h1>
-        <p class="text-slate-600 font-['Inter'] text-lg max-w-2xl mx-auto">
-            A comprehensive showcase of my work, featuring both collaborative team projects and personal initiatives
-            that demonstrate my skills and passion for web development.
-        </p>
-    </div>
+<!-- Scroll Progress Indicator -->
+<div class="fixed top-0 left-0 w-full h-1 bg-white/10 z-50">
+    <div id="scroll-progress" class="h-full bg-white transition-all duration-300" style="width: 0%"></div>
+</div>
 
-    <!-- Filter Tags -->
-    <div class="flex justify-center gap-3 mb-16">
-        <button class="px-6 py-2 bg-indigo-600 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md hover:shadow-lg">
-            All Projects
-        </button>
-        <button class="px-6 py-2 bg-white text-slate-700 font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md hover:shadow-lg border border-slate-200">
-            Team Projects
-        </button>
-        <button class="px-6 py-2 bg-white text-slate-700 font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md hover:shadow-lg border border-slate-200">
-            Personal Projects
-        </button>
-        <button class="px-6 py-2 bg-white text-slate-700 font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md hover:shadow-lg border border-slate-200">
-            E-Commerce
-        </button>
-    </div>
+<!-- Main Container with Scroll -->
+<div class="relative z-10 h-screen overflow-y-auto overflow-x-hidden" id="scroll-container">
 
-    <!-- Projects Grid -->
-    <div class="space-y-20">
+    <!-- Header Section -->
+    <div class="min-h-screen flex items-center justify-center px-6">
+        <div class="text-center">
+            <h1 class="text-white text-7xl lg:text-9xl font-['Space_Grotesk'] font-bold mb-6 animate-fade-in">
+                My Projects
+            </h1>
+            <p class="text-white/80 font-['Inter'] text-xl lg:text-2xl max-w-3xl mx-auto mb-12">
+                A comprehensive showcase of my work, featuring collaborative team projects and personal initiatives
+            </p>
+            <div class="flex justify-center gap-4 mb-12">
+                <span class="px-6 py-3 bg-white/10 text-white font-['Inter'] font-medium text-sm rounded-lg backdrop-blur-sm border border-white/20">
+                    3 Team Projects
+                </span>
+                <span class="px-6 py-3 bg-white/10 text-white font-['Inter'] font-medium text-sm rounded-lg backdrop-blur-sm border border-white/20">
+                    2 Personal Projects
+                </span>
+            </div>
 
-        <!-- Project 1: CORE3 (Team Project) -->
-        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
-            <div class="grid lg:grid-cols-2">
-                <!-- Images -->
-                <div class="bg-gradient-to-br from-indigo-50 to-violet-50 p-8">
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="../public/images/core3/480401290_1739524306909673_5647657285082023911_n.png"
-                             alt="CORE3 Screenshot 1"
-                             class="w-full h-48 object-cover rounded-xl shadow-md hover:shadow-xl transition-shadow cursor-pointer">
-                        <img src="../public/images/core3/480442671_1147856046476074_5434626914901438456_n.png"
-                             alt="CORE3 Screenshot 2"
-                             class="w-full h-48 object-cover rounded-xl shadow-md hover:shadow-xl transition-shadow cursor-pointer">
-                        <img src="../public/images/core3/480804400_526114123830872_8341101495875969672_n.png"
-                             alt="CORE3 Screenshot 3"
-                             class="w-full h-48 object-cover rounded-xl shadow-md hover:shadow-xl transition-shadow cursor-pointer">
-                        <img src="../public/images/core3/481145056_631311779494107_3770088957523355159_n.png"
-                             alt="CORE3 Screenshot 4"
-                             class="w-full h-48 object-cover rounded-xl shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+            <!-- Tech Stack Section -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <p class="text-white/60 font-['Inter'] text-sm uppercase tracking-wider mb-6">Built With</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <!-- Laravel -->
+                    <div class="group bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-3 transition-all">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 01-.188.326L9.93 23.949a.316.316 0 01-.066.027c-.008.002-.016.008-.024.01a.348.348 0 01-.192 0c-.011-.002-.02-.008-.03-.012-.02-.008-.042-.014-.062-.025L.533 18.755a.376.376 0 01-.189-.326V2.974c0-.033.005-.066.014-.098.003-.012.01-.02.014-.032a.369.369 0 01.023-.058c.004-.013.015-.022.023-.033l.033-.045c.012-.01.025-.018.037-.027.014-.012.027-.024.041-.034H.53L5.043.05a.375.375 0 01.375 0L9.93 2.647h.002c.015.01.027.021.04.033l.038.027c.013.014.02.03.033.045.008.011.02.021.025.033.01.02.017.038.024.058.003.011.01.021.013.032.01.031.014.064.014.098v9.652l3.76-2.164V5.527c0-.033.004-.066.013-.098.003-.01.01-.02.013-.032a.487.487 0 01.024-.059c.007-.012.018-.02.025-.033.012-.015.021-.03.033-.043.012-.012.025-.02.037-.028.014-.01.026-.023.041-.032h.001l4.513-2.598a.375.375 0 01.375 0l4.513 2.598c.016.01.027.021.042.031.012.01.025.018.036.028.013.014.022.03.034.044.008.012.019.021.024.033.011.02.018.04.024.06.006.01.012.021.015.032zm-.74 5.032V6.179l-1.578.908-2.182 1.256v4.283zm-4.51 7.75v-4.287l-2.147 1.225-6.126 3.498v4.325zM1.093 3.624v14.588l8.273 4.761v-4.325l-4.322-2.445-.002-.003H5.04c-.014-.01-.025-.021-.04-.031-.011-.01-.024-.018-.035-.027l-.001-.002c-.013-.012-.021-.025-.031-.04-.01-.011-.021-.022-.028-.036v-.001c-.008-.014-.013-.031-.02-.047-.006-.016-.014-.027-.018-.043a.49.49 0 01-.008-.057c-.002-.014-.006-.027-.006-.041V5.789l-2.18-1.257zM5.23.81L1.47 2.974l3.76 2.164 3.758-2.164zm1.956 13.505l2.182-1.256V3.624l-1.58.91-2.182 1.255v9.435zm11.581-10.95l-3.76 2.163 3.76 2.163 3.759-2.164zm-.376 4.978L16.21 7.087 14.63 6.18v4.283l2.182 1.256 1.58.908zm-8.65 9.654l5.514-3.148 2.756-1.572-3.757-2.163-4.323 2.489-3.941 2.27z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-['Inter'] text-sm font-medium">Laravel</span>
+                        </div>
+                    </div>
+
+                    <!-- PHP -->
+                    <div class="group bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-3 transition-all">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-4.652 15.91l-.797-3.481c-.034-.15-.055-.296-.063-.436a.95.95 0 01.003-.202.479.479 0 01.046-.172c.025-.05.062-.09.11-.118.05-.03.115-.045.196-.045h.938c.109 0 .191.013.248.04.057.027.097.067.12.12.024.053.037.12.037.2a1.034 1.034 0 01-.019.194l-.862 3.7h-.957zm5.652-2.348c-.192.757-.534 1.328-1.027 1.715-.493.386-1.185.58-2.075.58h-1.124l-.396 2.053h-1.322l1.553-8h2.675c.743 0 1.303.194 1.68.583.377.388.515.935.414 1.64a3.81 3.81 0 01-.378 1.429zm5.61 2.348l-.797-3.481a2.35 2.35 0 00-.063-.436.945.945 0 01.003-.202.479.479 0 01.046-.172c.025-.05.062-.09.11-.118.05-.03.115-.045.196-.045h.938c.109 0 .191.013.248.04.057.027.097.067.12.12.024.053.037.12.037.2a1.034 1.034 0 01-.019.194l-.862 3.7h-.957z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-['Inter'] text-sm font-medium">PHP</span>
+                        </div>
+                    </div>
+
+                    <!-- MySQL -->
+                    <div class="group bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-3 transition-all">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-['Inter'] text-sm font-medium">MySQL</span>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="group bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-3 transition-all">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.09.563.315.732.676.775-.507.775-.507 1.316-.844-.203-.314-.304-.451-.439-.586-.473-.528-1.103-.798-2.126-.775l-.528.067c-.507.124-.991.395-1.283.754-.855.968-.611 2.655.427 3.354 1.023.765 2.521.933 2.712 1.653.18.878-.652 1.159-1.475 1.058-.607-.136-.945-.439-1.316-1.002l-1.372.788c.157.359.337.517.607.832 1.305 1.316 4.568 1.249 5.153-.754.021-.067.18-.528.056-1.237l.034.049zm-6.737-5.434h-1.686c0 1.453-.007 2.898-.007 4.354 0 .924.047 1.772-.104 2.033-.247.517-.886.451-1.175.359-.297-.146-.448-.349-.623-.641-.047-.078-.082-.146-.095-.146l-1.368.844c.229.473.563.879.994 1.137.641.383 1.502.507 2.404.305.588-.17 1.095-.519 1.358-1.059.384-.697.302-1.553.299-2.509.008-1.541 0-3.083 0-4.635l.003-.042z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-['Inter'] text-sm font-medium">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Tailwind CSS -->
+                    <div class="group bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-3 transition-all">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-['Inter'] text-sm font-medium">Tailwind</span>
+                        </div>
+                    </div>
+
+                    <!-- Bootstrap -->
+                    <div class="group bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-3 transition-all">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-['Inter'] text-sm font-medium">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <!-- Stripe -->
+                    <div class="group bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-3 transition-all">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-['Inter'] text-sm font-medium">Stripe</span>
+                        </div>
+                    </div>
+
+                    <!-- Vite -->
+                    <div class="group bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-3 transition-all">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14.746 3.825 13.098.26a.485.485 0 0 0-.87 0l-1.649 3.565-3.565 7.704a.485.485 0 0 0 .435.71h7.302a.485.485 0 0 0 .435-.71l-3.565-7.704 3.125-6.74ZM23.107 7.56l-6.83 14.784a.97.97 0 0 1-1.74 0L8.707 7.56a.97.97 0 0 1 .87-1.42h12.66a.97.97 0 0 1 .87 1.42Z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-['Inter'] text-sm font-medium">Vite</span>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Content -->
-                <div class="p-8 lg:p-12 flex flex-col justify-center">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 font-['Inter'] text-xs font-semibold rounded-full">TEAM PROJECT</span>
-                        <span class="px-3 py-1 bg-violet-100 text-violet-700 font-['Inter'] text-xs font-semibold rounded-full">CAPSTONE</span>
+            <div class="mt-16 animate-bounce">
+                <svg class="w-8 h-8 mx-auto text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects List -->
+    <div class="space-y-0">
+
+        <!-- Project 1: CORE3 -->
+        <section class="min-h-screen flex items-center px-6 lg:px-20 py-20" data-project="1">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 p-8 lg:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-8xl font-mono font-bold text-white/20">01</span>
+                        <div>
+                            <div class="flex gap-2 mb-2">
+                                <span class="px-3 py-1 bg-white/20 text-white font-['Inter'] text-xs font-semibold rounded-full backdrop-blur-sm">TEAM PROJECT</span>
+                                <span class="px-3 py-1 bg-white/20 text-white font-['Inter'] text-xs font-semibold rounded-full backdrop-blur-sm">CAPSTONE</span>
+                            </div>
+                            <h2 class="text-white text-4xl lg:text-5xl  font-bold">
+                                E-Commerce Core Transaction
+                            </h2>
+                        </div>
                     </div>
 
-                    <h2 class="text-slate-900 text-3xl font-['Space_Grotesk'] font-bold mb-3">
-                        E-Commerce Core Transaction System
-                    </h2>
-
-                    <p class="text-slate-600 font-['Inter'] text-base mb-6 leading-relaxed">
+                    <p class="text-white/80 font-['Inter'] text-lg lg:text-xl mb-8 leading-relaxed max-w-3xl">
                         A comprehensive e-commerce platform with integrated analytics dashboard, designed to track
-                        customer behavior and provide actionable insights for business growth. Built as a capstone
-                        project with a focus on scalability and user experience.
+                        customer behavior and provide actionable insights for business growth.
                     </p>
 
-                    <!-- Team Members -->
-                    <div class="mb-6">
-                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Team Members</h3>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
-                                KD
-                            </div>
-                            <div class="w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
-                                JM
-                            </div>
-                            <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
-                                RS
-                            </div>
-                            <span class="text-slate-500 font-['Inter'] text-sm ml-2">+ 2 more</span>
-                        </div>
-                    </div>
-
-                    <!-- Technologies -->
-                    <div class="mb-6">
-                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Technologies
-                            Used</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Laravel</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">PHP</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">MySQL</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Stripe API</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Bootstrap</span>
-                        </div>
-                    </div>
-
                     <!-- Key Features -->
-                    <div class="mb-6">
-                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Key Features</h3>
-                        <ul class="space-y-2 text-slate-600 font-['Inter'] text-sm">
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-indigo-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                          clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Customer behavior analytics and trends dashboard</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-indigo-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                          clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Secure payment processing with Stripe integration</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-indigo-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                          clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Admin panel for content and inventory management</span>
-                            </li>
-                        </ul>
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="space-y-4">
+                            <h3 class="text-white font-['Space_Grotesk'] font-semibold text-lg">Key Features</h3>
+                            <ul class="space-y-3 text-white/70 font-['Inter'] text-sm">
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-white mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Customer behavior analytics dashboard</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-white mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Stripe payment integration</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-white mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Inventory management system</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-white font-['Space_Grotesk'] font-semibold text-lg">Technologies</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">Laravel</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">PHP</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">MySQL</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">Stripe API</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">Bootstrap</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Links -->
-                    <div class="flex gap-3">
+                    <div class="flex flex-wrap gap-4">
                         <a href="#"
-                           class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md">
+                           class="px-8 py-4 bg-white hover:bg-white/90 text-indigo-600 font-['Inter'] font-semibold text-sm rounded-xl transition-all shadow-xl">
                             View Demo
                         </a>
                         <a href="#"
-                           class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-['Inter'] font-medium text-sm rounded-lg transition-all border border-slate-200">
+                           class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-['Inter'] font-semibold text-sm rounded-xl transition-all backdrop-blur-sm border border-white/20">
                             GitHub
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Project 2: File Management (Team Project - OJT) -->
-        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
-            <div class="grid lg:grid-cols-2">
-                <!-- Content (Left side for this one) -->
-                <div class="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="px-3 py-1 bg-violet-100 text-violet-700 font-['Inter'] text-xs font-semibold rounded-full">TEAM PROJECT</span>
-                        <span class="px-3 py-1 bg-emerald-100 text-emerald-700 font-['Inter'] text-xs font-semibold rounded-full">OJT PROJECT</span>
+        <!-- Project 2: File Management -->
+        <section class="min-h-screen flex items-center px-6 lg:px-20 py-20" data-project="2">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 p-8 lg:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-8xl font-['Space_Grotesk'] font-bold text-white/20">02</span>
+                        <div>
+                            <div class="flex gap-2 mb-2">
+                                <span class="px-3 py-1 bg-white/20 text-white font-['Inter'] text-xs font-semibold rounded-full backdrop-blur-sm">TEAM PROJECT</span>
+                                <span class="px-3 py-1 bg-white/20 text-white font-['Inter'] text-xs font-semibold rounded-full backdrop-blur-sm">OJT</span>
+                            </div>
+                            <h2 class="text-white text-4xl lg:text-5xl font-['Space_Grotesk'] font-bold">
+                                File Management System
+                            </h2>
+                        </div>
                     </div>
 
-                    <h2 class="text-slate-900 text-3xl font-['Space_Grotesk'] font-bold mb-3">
-                        File Management System
-                    </h2>
-
-                    <p class="text-slate-600 font-['Inter'] text-base mb-6 leading-relaxed">
-                        Digital file management solution developed for the Registrar Office at Bestlink College of the
-                        Philippines. Streamlines document storage, retrieval, and organization for student records with
-                        role-based access control.
+                    <p class="text-white/80 font-['Inter'] text-lg lg:text-xl mb-8 leading-relaxed max-w-3xl">
+                        Digital file management solution for the Registrar Office at BCP. Streamlines document storage,
+                        retrieval, and organization.
                     </p>
 
-                    <!-- Team Members -->
-                    <div class="mb-6">
-                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Team Members</h3>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
-                                KD
-                            </div>
-                            <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
-                                AL
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="space-y-4">
+                            <h3 class="text-white font-['Space_Grotesk'] font-semibold text-lg">Key Features</h3>
+                            <ul class="space-y-3 text-white/70 font-['Inter'] text-sm">
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-white mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Role-based access control</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-white mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Advanced search & filtering</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-white mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Secure document storage</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-white font-['Space_Grotesk'] font-semibold text-lg">Technologies</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">Laravel</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">PHP</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">MySQL</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">jQuery</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Technologies -->
-                    <div class="mb-6">
-                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Technologies
-                            Used</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Laravel</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">PHP</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">MySQL</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">jQuery</span>
-                        </div>
-                    </div>
-
-                    <!-- Key Features -->
-                    <div class="mb-6">
-                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Key Features</h3>
-                        <ul class="space-y-2 text-slate-600 font-['Inter'] text-sm">
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-violet-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                          clip-rule="evenodd"></path>
-                                </svg>
-                                <span>User authentication with role-based permissions</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-violet-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                          clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Advanced search and filter functionality</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-violet-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                          clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Secure document storage and retrieval system</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Links -->
-                    <div class="flex gap-3">
+                    <div class="flex flex-wrap gap-4">
                         <a href="#"
-                           class="px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md">
-                            View Case Study
+                           class="px-8 py-4 bg-white hover:bg-white/90 text-violet-600 font-['Inter'] font-semibold text-sm rounded-xl transition-all shadow-xl">
+                            Case Study
                         </a>
                         <a href="#"
-                           class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-['Inter'] font-medium text-sm rounded-lg transition-all border border-slate-200">
+                           class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-['Inter'] font-semibold text-sm rounded-xl transition-all backdrop-blur-sm border border-white/20">
                             Documentation
                         </a>
                     </div>
                 </div>
-
-                <!-- Image Placeholder -->
-                <div class="bg-gradient-to-br from-violet-50 to-purple-50 p-8 order-1 lg:order-2 flex items-center justify-center min-h-[400px]">
-                    <div class="text-center">
-                        <svg class="w-32 h-32 mx-auto text-violet-300 mb-4" fill="none" stroke="currentColor"
-                             viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                        </svg>
-                        <p class="text-violet-400 font-['Space_Grotesk'] text-lg">File Management System</p>
-                    </div>
-                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Project 3: MDesserts (Personal Project) -->
-        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
-            <div class="grid lg:grid-cols-2">
-                <!-- Image Placeholder -->
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 flex items-center justify-center min-h-[400px]">
-                    <div class="text-center">
-                        <svg class="w-32 h-32 mx-auto text-blue-300 mb-4" fill="none" stroke="currentColor"
-                             viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                        <p class="text-blue-400 font-['Space_Grotesk'] text-lg">MDesserts E-Commerce</p>
-                    </div>
-                </div>
-
-                <!-- Content -->
-                <div class="p-8 lg:p-12 flex flex-col justify-center">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 font-['Inter'] text-xs font-semibold rounded-full">PERSONAL PROJECT</span>
-                        <span class="px-3 py-1 bg-amber-100 text-amber-700 font-['Inter'] text-xs font-semibold rounded-full">E-COMMERCE</span>
+        <!-- Project 3: MDesserts -->
+        <section class="min-h-screen flex items-center px-6 lg:px-20 py-20" data-project="3">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 p-8 lg:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-8xl font-['Space_Grotesk'] font-bold text-white/20">03</span>
+                        <div>
+                            <div class="flex gap-2 mb-2">
+                                <span class="px-3 py-1 bg-white/20 text-white font-['Inter'] text-xs font-semibold rounded-full backdrop-blur-sm">PERSONAL</span>
+                                <span class="px-3 py-1 bg-white/20 text-white font-['Inter'] text-xs font-semibold rounded-full backdrop-blur-sm">E-COMMERCE</span>
+                            </div>
+                            <h2 class="text-white text-4xl lg:text-5xl font-['Space_Grotesk'] font-bold">
+                                MDesserts Platform
+                            </h2>
+                        </div>
                     </div>
 
-                    <h2 class="text-slate-900 text-3xl font-['Space_Grotesk'] font-bold mb-3">
-                        MDesserts E-Commerce Platform
-                    </h2>
-
-                    <p class="text-slate-600 font-['Inter'] text-base mb-6 leading-relaxed">
-                        A fully functional online dessert store with modern UI and seamless payment integration.
-                        Features product catalog, cart management, order tracking, and responsive design optimized for
-                        all devices.
+                    <p class="text-white/80 font-['Inter'] text-lg lg:text-xl mb-8 leading-relaxed max-w-3xl">
+                        A fully functional online dessert store with modern UI and seamless payment integration. Solo
+                        full-stack project.
                     </p>
 
-                    <!-- Solo Project Badge -->
-                    <div class="mb-6">
-                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Project Role</h3>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
-                                KD
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="space-y-4">
+                            <h3 class="text-white font-['Space_Grotesk'] font-semibold text-lg">Key Features</h3>
+                            <ul class="space-y-3 text-white/70 font-['Inter'] text-sm">
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-white mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>User authentication system</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-white mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Stripe payment gateway</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-white mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Responsive mobile design</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-white font-['Space_Grotesk'] font-semibold text-lg">Technologies</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">Laravel</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">PHP</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">MySQL</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">Stripe</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">Tailwind</span>
                             </div>
-                            <span class="text-slate-600 font-['Inter'] text-sm">Solo Developer - Full Stack</span>
                         </div>
                     </div>
 
-                    <!-- Technologies -->
-                    <div class="mb-6">
-                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Technologies
-                            Used</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Laravel</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">PHP</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">MySQL</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Stripe API</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Tailwind CSS</span>
-                        </div>
-                    </div>
-
-                    <!-- Key Features -->
-                    <div class="mb-6">
-                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Key Features</h3>
-                        <ul class="space-y-2 text-slate-600 font-['Inter'] text-sm">
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                          clip-rule="evenodd"></path>
-                                </svg>
-                                <span>User registration and authentication system</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                          clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Integrated Stripe payment gateway</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                          clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Responsive design with mobile-friendly layout</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Links -->
-                    <div class="flex gap-3">
+                    <div class="flex flex-wrap gap-4">
                         <a href="#"
-                           class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md">
+                           class="px-8 py-4 bg-white hover:bg-white/90 text-blue-600 font-['Inter'] font-semibold text-sm rounded-xl transition-all shadow-xl">
                             Live Demo
                         </a>
                         <a href="#"
-                           class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-['Inter'] font-medium text-sm rounded-lg transition-all border border-slate-200">
+                           class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-['Inter'] font-semibold text-sm rounded-xl transition-all backdrop-blur-sm border border-white/20">
                             GitHub
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Project 4: Portfolio Website (Personal Project) -->
-        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
-            <div class="grid lg:grid-cols-2">
-                <!-- Content -->
-                <div class="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="px-3 py-1 bg-emerald-100 text-emerald-700 font-['Inter'] text-xs font-semibold rounded-full">PERSONAL PROJECT</span>
-                        <span class="px-3 py-1 bg-pink-100 text-pink-700 font-['Inter'] text-xs font-semibold rounded-full">WEB DESIGN</span>
+        <!-- Project 4: Portfolio -->
+        <section class="min-h-screen flex items-center px-6 lg:px-20 py-20" data-project="4">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 p-8 lg:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-8xl font-['Space_Grotesk'] font-bold text-white/20">04</span>
+                        <div>
+                            <div class="flex gap-2 mb-2">
+                                <span class="px-3 py-1 bg-white/20 text-white font-['Inter'] text-xs font-semibold rounded-full backdrop-blur-sm">PERSONAL</span>
+                                <span class="px-3 py-1 bg-white/20 text-white font-['Inter'] text-xs font-semibold rounded-full backdrop-blur-sm">WEB DESIGN</span>
+                            </div>
+                            <h2 class="text-white text-4xl lg:text-5xl font-['Space_Grotesk'] font-bold">
+                                Portfolio Website
+                            </h2>
+                        </div>
                     </div>
 
-                    <h2 class="text-slate-900 text-3xl font-['Space_Grotesk'] font-bold mb-3">
-                        Personal Portfolio Website
-                    </h2>
-
-                    <p class="text-slate-600 font-['Inter'] text-base mb-6 leading-relaxed">
-                        A modern, futuristic portfolio website showcasing my projects, skills, and experience. Features
-                        smooth animations, responsive design, and an intuitive user experience with both light and dark
-                        themes.
+                    <p class="text-white/80 font-['Inter'] text-lg lg:text-xl mb-8 leading-relaxed max-w-3xl">
+                        A modern, futuristic portfolio website showcasing projects, skills, and experience with smooth
+                        animations.
                     </p>
 
-                    <!-- Solo Project Badge -->
-                    <div class="mb-6">
-                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Project Role</h3>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center text-white font-['Inter'] font-semibold text-sm">
-                                KD
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="space-y-4">
+                            <h3 class="text-white font-['Space_Grotesk'] font-semibold text-lg">Key Features</h3>
+                            <ul class="space-y-3 text-white/70 font-['Inter'] text-sm">
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-white mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Smooth scroll animations</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-white mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Fully responsive design</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-white mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Modern UI/UX design</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-white font-['Space_Grotesk'] font-semibold text-lg">Technologies</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">Vite</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">JavaScript</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">Tailwind CSS</span>
+                                <span class="px-4 py-2 bg-white/20 text-white font-['Inter'] text-sm rounded-lg backdrop-blur-sm">HTML5</span>
                             </div>
-                            <span class="text-slate-600 font-['Inter'] text-sm">Designer & Developer</span>
                         </div>
                     </div>
 
-                    <!-- Technologies -->
-                    <div class="mb-6">
-                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Technologies
-                            Used</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Vite</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Vanilla JS</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">Tailwind CSS</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-['Inter'] text-xs rounded-lg border border-slate-200">HTML5</span>
-                        </div>
-                    </div>
-
-                    <!-- Key Features -->
-                    <div class="mb-6">
-                        <h3 class="text-slate-900 font-['Space_Grotesk'] font-semibold text-sm mb-3">Key Features</h3>
-                        <ul class="space-y-2 text-slate-600 font-['Inter'] text-sm">
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-emerald-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                          clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Smooth animations and transitions</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-emerald-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                          clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Fully responsive across all devices</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-emerald-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                          clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Dark and light theme variations</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Links -->
-                    <div class="flex gap-3">
-                        <a href="../index.html"
-                           class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-md">
+                    <div class="flex flex-wrap gap-4">
+                        <a href="index.html"
+                           class="px-8 py-4 bg-white hover:bg-white/90 text-emerald-600 font-['Inter'] font-semibold text-sm rounded-xl transition-all shadow-xl">
                             You're Here!
                         </a>
                         <a href="#"
-                           class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-['Inter'] font-medium text-sm rounded-lg transition-all border border-slate-200">
+                           class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-['Inter'] font-semibold text-sm rounded-xl transition-all backdrop-blur-sm border border-white/20">
                             GitHub
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Image Placeholder -->
-                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 order-1 lg:order-2 flex items-center justify-center min-h-[400px]">
-                    <div class="text-center">
-                        <svg class="w-32 h-32 mx-auto text-emerald-300 mb-4" fill="none" stroke="currentColor"
-                             viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                        <p class="text-emerald-400 font-['Space_Grotesk'] text-lg">Portfolio Website</p>
-                    </div>
-                </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-black/20 backdrop-blur-md py-12 px-6 lg:px-40 border-t border-white/10">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-white/60 font-['Inter'] text-sm text-center md:text-left">
+                &copy; 2025 Ken Delantar. All rights reserved.
+            </p>
+            <div class="flex gap-6">
+                <a href="https://github.com/kendelantar" target="_blank"
+                   class="text-white/60 hover:text-white transition-colors text-sm">GitHub</a>
+                <a href="https://www.linkedin.com/in/kendelantar" target="_blank"
+                   class="text-white/60 hover:text-white transition-colors text-sm">LinkedIn</a>
+                <a href="mailto:its.kendelantar@gmail.com"
+                   class="text-white/60 hover:text-white transition-colors text-sm">Email</a>
             </div>
         </div>
-    </div>
+    </footer>
 </div>
 
-<!-- Footer -->
-<footer class="bg-slate-900 py-12 px-6 lg:px-40 mt-20">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-slate-400 font-['Inter'] text-sm text-center md:text-left">
-            &copy; 2025 Ken Delantar. All rights reserved.
-        </p>
-        <div class="flex gap-6">
-            <a href="https://github.com/kendelantar" target="_blank"
-               class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">GitHub</a>
-            <a href="https://www.linkedin.com/in/kendelantar" target="_blank"
-               class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">LinkedIn</a>
-            <a href="mailto:its.kendelantar@gmail.com"
-               class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Email</a>
-        </div>
-    </div>
-</footer>
+<!-- Scroll Script -->
+<script>
+    const scrollContainer = document.getElementById('scroll-container');
+    const scrollProgress = document.getElementById('scroll-progress');
+    const backgrounds = {
+        1: document.getElementById('bg-project-1'),
+        2: document.getElementById('bg-project-2'),
+        3: document.getElementById('bg-project-3'),
+        4: document.getElementById('bg-project-4')
+    };
+
+    let currentProject = 1;
+
+    function updateBackground() {
+        const sections = document.querySelectorAll('[data-project]');
+        const scrollPos = scrollContainer.scrollTop + window.innerHeight / 2;
+
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const sectionTop = rect.top + scrollContainer.scrollTop;
+            const sectionBottom = sectionTop + rect.height;
+
+            if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                const projectNum = parseInt(section.dataset.project);
+                if (projectNum !== currentProject) {
+                    // Hide all backgrounds
+                    Object.values(backgrounds).forEach(bg => bg.style.opacity = '0');
+                    // Show current background
+                    backgrounds[projectNum].style.opacity = '1';
+                    currentProject = projectNum;
+                }
+            }
+        });
+
+        // Update scroll progress
+        const scrollHeight = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+        const scrolled = (scrollContainer.scrollTop / scrollHeight) * 100;
+        scrollProgress.style.width = scrolled + '%';
+    }
+
+    scrollContainer.addEventListener('scroll', updateBackground);
+    updateBackground(); // Initial call
+</script>
 
 </body>
 </html>

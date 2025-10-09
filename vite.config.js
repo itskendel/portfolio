@@ -11,10 +11,7 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                main: resolve(__dirname, 'index.html'),
-                profile: resolve(__dirname, 'profile.html'),
-                project: resolve(__dirname, 'project.html'),
-                skill: resolve(__dirname, 'skill.html')
+                main: resolve(__dirname, 'index.html')
             }
         }
     }

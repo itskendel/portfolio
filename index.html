@@ -2,585 +2,834 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Ken | Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ken Jayson Delantar | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-            rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="/src/style.css">
+
+    <style>
+        :root {
+            --font-heading: 'Poppins', sans-serif;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            font-feature-settings: "ss01", "cv11";
+        }
+
+        .font-heading {
+            font-family: var(--font-heading);
+            letter-spacing: -0.02em;
+        }
+
+        .font-sans {
+            font-family: var(--font-sans);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-heading);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        p {
+            font-family: var(--font-sans);
+            line-height: 1.7;
+        }
+    </style>
 </head>
 
-<body class="bg-slate-50 overflow-x-hidden antialiased">
-<div class="relative">
-    <header class="fixed top-0 left-0 w-full flex justify-between py-4 px-7 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-        <h1 class="inline-flex flex-col">
-        <span class="font-medium font-['Space_Grotesk'] text-xs text-slate-600 uppercase tracking-[0.2em]">
-          DELANTAR
-        </span>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen antialiased py-8 lg:py-16">
+    <main class="max-w-6xl mx-auto px-4 lg:px-8 space-y-24">
 
-            <span class="font-bold font-['Space_Grotesk'] text-2xl text-slate-900">
-          KEN
-        </span>
-        </h1>
+        <!-- Hero Section -->
+        <section class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 lg:p-16">
+            <div class="flex flex-col lg:flex-row gap-12 items-start">
+                <!-- <img src="/public/images/personal/profile.png" alt=""
+                    class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl object-cover border border-gray-100"> -->
 
-        <button onclick="menu.hidden^=1"
-                class="font-['Inter'] text-sm font-medium text-slate-900 hover:text-indigo-600 transition-colors">
-            MENU
-        </button>
-    </header>
+                <div class="flex-1 space-y-8">
+                    <div class="space-y-4">
+                        <h1 class="text-5xl lg:text-6xl text-gray-900 font-bold">
+                            Hi, I'm <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Ken</span>
+                        </h1>
+                        <p class="text-base text-gray-600 leading-relaxed max-w-2xl">
+                            Aspiring Web Developer with practical experience in full-stack development, database
+                            management, and
+                            system design. Proficient in PHP, JavaScript, MySQL, and the Laravel framework, with
+                            demonstrated
+                            ability to develop and deploy web applications. Strong foundation in problem-solving,
+                            analytical
+                            thinking, and collaborative teamwork, honed through academic projects and internship
+                            experience.
+                        </p>
+                    </div>
 
-    <!--    Hero section    -->
-    <section class="h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 content-center">
-        <div class="grid lg:grid-cols-2 lg:px-20">
-            <div class="col-span-1 ">
-                <h1 class="text-3xl text-indigo-300 font-['Space_Grotesk'] font-medium tracking-wider">DELANTAR</h1>
-                <h1 class="text-7xl text-white font-['Space_Grotesk'] font-bold">KEN</h1>
-                <div class="relative h-20">
-                    <h1 id="role-text"
-                        class="text-5xl text-indigo-200 font-['Inter'] font-light mt-4 transition-opacity duration-700 ease-in-out tracking-tight">
-                        Front-end Developer
-                    </h1>
+                    <div class="flex items-center gap-4">
+                        <a href="#projects" class="btn-black">View Projects</a>
+                        <a href="/public/CV_KENJAYSONDELANTAR.pdf" download="KENDELANTAR.pdf" class="btn-white">Download CV</a>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="flex items-center gap-4 pt-4">
+                        <a href="mailto:your.email@example.com" class="text-gray-500 hover:text-gray-900 transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/yourusername" target="_blank"
+                            class="text-gray-500 hover:text-gray-900 transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank"
+                            class="text-gray-500 hover:text-gray-900 transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section id="skills" class="space-y-8">
+            <div class="space-y-4">
+                <h2 class="text-4xl lg:text-5xl text-gray-900 font-bold">Tech Stack</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"></div>
+                <p class="text-lg text-gray-600 leading-relaxed max-w-4xl">
+                    The following technologies represent the tools and frameworks I've learned and applied throughout my
+                    academic years and personal projects. My experience spans both frontend and backend development,
+                    giving me
+                    a strong understanding of full-stack web application design, database management, and user interface
+                    development.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- HTML -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-orange-200 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <img src="/public/images/skills/html-5-svgrepo-com.svg" alt="">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">HTML</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-orange-500 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Advanced • 95%</p>
+                        </div>
+                    </div>
                 </div>
 
-                <script>
-                    const roles = ["Front-end Developer", "Back-end Developer", "Full Stack Developer"];
-                    let index = 0;
-                    const roleText = document.getElementById("role-text");
-
-                    setInterval(() => {
-                        roleText.classList.add("opacity-0");
-
-                        setTimeout(() => {
-                            index = (index + 1) % roles.length;
-                            roleText.textContent = roles[index];
-                            roleText.classList.remove("opacity-0");
-                        }, 700);
-                    }, 3000);
-                </script>
-
-
-                <div class="inline-flex gap-3 mt-2">
-                    <a href="dist/CV-KEN_DELANTAR.pdf" download
-                       class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50">
-                        DOWNLOAD CV
-                    </a>
-
-                    <a href="profile.html"
-                       class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all border border-white/20 backdrop-blur-sm">
-                        VIEW PROFILE
-                    </a>
+                <!-- CSS -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24" fill="none">
+                            <path d="M3.5 2h17l-1.5 17-7 2-7-2L3.5 2z" fill="#1572B6" stroke="#1572B6"
+                                stroke-width="1.5" />
+                            <path d="M12 4v16M8 8l8 0M7 12h10M8 16h8" stroke="white" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">CSS</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-blue-500 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Advanced • 90%</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="mt-12 ">
-                    <p class="text-indigo-300 font-['Space_Grotesk'] text-sm uppercase tracking-wider mb-4 text-left">
-                        Tech Stack</p>
-                    <div class="flex flex-wrap justify-start gap-3 max-w-2xl">
-                        <!-- Laravel -->
-                        <div class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-indigo-400/50 rounded-xl px-4 py-2 transition-all">
-                            <div class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 01-.188.326L9.93 23.949a.316.316 0 01-.066.027c-.008.002-.016.008-.024.01a.348.348 0 01-.192 0c-.011-.002-.02-.008-.03-.012-.02-.008-.042-.014-.062-.025L.533 18.755a.376.376 0 01-.189-.326V2.974c0-.033.005-.066.014-.098.003-.012.01-.02.014-.032a.369.369 0 01.023-.058c.004-.013.015-.022.023-.033l.033-.045c.012-.01.025-.018.037-.027.014-.012.027-.024.041-.034H.53L5.043.05a.375.375 0 01.375 0L9.93 2.647h.002c.015.01.027.021.04.033l.038.027c.013.014.02.03.033.045.008.011.02.021.025.033.01.02.017.038.024.058.003.011.01.021.013.032.01.031.014.064.014.098v9.652l3.76-2.164V5.527c0-.033.004-.066.013-.098.003-.01.01-.02.013-.032a.487.487 0 01.024-.059c.007-.012.018-.02.025-.033.012-.015.021-.03.033-.043.012-.012.025-.02.037-.028.014-.01.026-.023.041-.032h.001l4.513-2.598a.375.375 0 01.375 0l4.513 2.598c.016.01.027.021.042.031.012.01.025.018.036.028.013.014.022.03.034.044.008.012.019.021.024.033.011.02.018.04.024.06.006.01.012.021.015.032zm-.74 5.032V6.179l-1.578.908-2.182 1.256v4.283zm-4.51 7.75v-4.287l-2.147 1.225-6.126 3.498v4.325zM1.093 3.624v14.588l8.273 4.761v-4.325l-4.322-2.445-.002-.003H5.04c-.014-.01-.025-.021-.04-.031-.011-.01-.024-.018-.035-.027l-.001-.002c-.013-.012-.021-.025-.031-.04-.01-.011-.021-.022-.028-.036v-.001c-.008-.014-.013-.031-.02-.047-.006-.016-.014-.027-.018-.043a.49.49 0 01-.008-.057c-.002-.014-.006-.027-.006-.041V5.789l-2.18-1.257zM5.23.81L1.47 2.974l3.76 2.164 3.758-2.164zm1.956 13.505l2.182-1.256V3.624l-1.58.91-2.182 1.255v9.435zm11.581-10.95l-3.76 2.163 3.76 2.163 3.759-2.164zm-.376 4.978L16.21 7.087 14.63 6.18v4.283l2.182 1.256 1.58.908zm-8.65 9.654l5.514-3.148 2.756-1.572-3.757-2.163-4.323 2.489-3.941 2.27z"/>
-                                </svg>
-                                <span class="text-white font-['Inter'] text-xs font-medium">Laravel</span>
+                <!-- JavaScript -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-yellow-200 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24" fill="#F7DF1E">
+                            <path
+                                d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">JavaScript</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-yellow-400 rounded-full" style="width: 85%"></div>
+                                </div>
                             </div>
+                            <p class="text-sm text-gray-500 mt-1">Proficient • 85%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHP -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-purple-200 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24">
+                            <ellipse cx="12" cy="12" rx="11" ry="6" fill="none" stroke="#777BB4" stroke-width="1.5" />
+                            <text x="12" y="15" text-anchor="middle" fill="#777BB4" font-family="sans-serif"
+                                font-weight="bold" font-size="8">PHP</text>
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">PHP</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-purple-600 rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Advanced • 88%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laravel -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-red-200 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24" fill="#FF2D20">
+                            <path
+                                d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 01-.188.326L9.93 23.949a.316.316 0 01-.066.027c-.008.002-.016.008-.024.01a.348.348 0 01-.192 0c-.011-.002-.02-.008-.03-.012-.02-.008-.042-.014-.062-.025L.533 18.755a.376.376 0 01-.189-.326V2.974c0-.033.005-.066.014-.098.003-.012.01-.02.014-.032a.369.369 0 01.023-.058c.004-.013.015-.022.023-.033l.033-.045c.012-.01.025-.018.037-.027.014-.012.027-.024.041-.034H.53L5.043.05a.375.375 0 01.375 0L9.93 2.647h.002c.015.01.027.021.04.033l.038.027c.013.014.02.03.033.045.008.011.02.021.025.033.01.02.017.038.024.058.003.011.01.021.013.032.01.031.014.064.014.098v9.652l3.76-2.164V5.527c0-.033.004-.066.013-.098.003-.01.01-.02.013-.032a.487.487 0 01.024-.059c.007-.012.018-.02.025-.033.012-.015.021-.03.033-.043.012-.012.025-.02.037-.028.014-.01.026-.023.041-.032h.001l4.513-2.598a.375.375 0 01.375 0l4.513 2.598c.016.01.027.021.042.031.012.01.025.018.036.028.013.014.022.03.034.044.008.012.019.021.024.033.011.02.018.04.024.06.006.01.012.021.015.032zm-.74 5.032V6.179l-1.578.908-2.182 1.256v4.283zm-4.51 7.75v-4.287l-2.146 1.225-6.127 3.498v4.325zM1.093 3.624v14.588l8.273 4.761v-4.325l-4.322-2.445-.002-.003H5.04c-.014-.01-.025-.021-.04-.031-.011-.01-.024-.018-.035-.027l-.001-.002c-.013-.012-.021-.025-.031-.04-.01-.011-.021-.022-.028-.036v-.001c-.008-.014-.013-.031-.02-.047-.006-.016-.014-.027-.018-.043a.49.49 0 01-.008-.057c-.002-.014-.006-.027-.006-.041V5.789l-2.18-1.257zM5.23.81L1.47 2.974l3.76 2.164 3.758-2.164zm1.956 13.505l2.182-1.256V3.624l-1.58.91-2.18 1.255v9.435zm11.581-10.95l-3.76 2.163 3.76 2.163 3.759-2.164zm-.376 4.978L16.21 7.087 14.63 6.18v4.283l2.182 1.256 1.58.908zm-8.65 9.654l5.514-3.148 2.756-1.572-3.757-2.163-4.323 2.489-3.941 2.27z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">Laravel</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-red-500 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Advanced • 90%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MySQL -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24">
+                            <path fill="#00758F"
+                                d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.922.205 1.156.4-1.064.678-2.227.835-3.516zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745z" />
+                            <path fill="#F29111"
+                                d="M21.285 14.615h.908l-.747 2.36c-.113.357-.17.673-.17.944 0 .296.104.533.31.71.158.12.345.18.558.18.14 0 .274-.017.405-.05v.494a2.42 2.42 0 01-.595.138c-.573 0-1.1-.357-1.583-1.073-.616-.927-1.114-2.415-1.492-4.46h.908l.616 2.12c.065.193.12.417.165.672a9.635 9.635 0 00.102.672h.008c-.033-.234-.065-.62-.097-1.156l-.336-2.308z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">MySQL</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-blue-600 rounded-full" style="width: 82%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Proficient • 82%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-cyan-200 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24" fill="#06B6D4">
+                            <path
+                                d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">Tailwind CSS</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-cyan-500 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Advanced • 92%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bootstrap -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-purple-200 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24" fill="#7952B3">
+                            <path
+                                d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">Bootstrap</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-purple-600 rounded-full" style="width: 78%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Proficient • 78%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Git -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-orange-200 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24" fill="#F05032">
+                            <path
+                                d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">Git</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-orange-600 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Proficient • 80%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GitHub -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-gray-300 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24" fill="#181717">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">GitHub</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gray-800 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Proficient • 85%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vite -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-purple-200 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24">
+                            <path fill="#646CFF"
+                                d="m8.286 10.578.512-8.657a.306.306 0 0 1 .247-.282L17.377.006a.306.306 0 0 1 .353.385l-1.558 5.403a.306.306 0 0 0 .352.385l2.388-.46a.306.306 0 0 1 .332.438l-6.79 13.55-.123.19a.294.294 0 0 1-.252.14c-.177 0-.35-.152-.305-.369l1.095-5.301a.306.306 0 0 0-.388-.355l-1.433.435a.306.306 0 0 1-.389-.354l.69-3.375a.306.306 0 0 0-.37-.36l-2.32.536a.306.306 0 0 1-.374-.316" />
+                            <path fill="#41D1FF"
+                                d="M8.286 10.578.413 13.942a.294.294 0 0 0-.117.501l7.77 6.393c.117.098.309.025.348-.128l.937-3.65a.306.306 0 0 1 .374-.214l1.434.435a.306.306 0 0 0 .374-.316l-.69-3.375a.306.306 0 0 1 .37-.36l2.32.536a.306.306 0 0 0 .374-.316z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">Vite</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-purple-500 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Intermediate • 75%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24">
+                            <path fill="#A8B9CC"
+                                d="M16.5921 9.1962s-.354-3.298-3.627-3.39c-3.2741-.09-4.9552 2.474-4.9552 6.14 0 3.6651 1.858 6.5972 5.0451 6.5972 3.184 0 3.5381-3.665 3.5381-3.665l6.1041.365s.36 3.31-2.196 5.836c-2.552 2.5241-5.6901 2.9371-7.8762 2.9201-2.19-.017-5.2261.034-8.1602-2.97-2.938-3.0101-3.436-5.9302-3.436-8.8002 0-2.8701.556-6.6702 4.047-9.5502C7.444.72 9.849 0 12.254 0c10.0422 0 10.7172 9.2602 10.7172 9.2602z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">C</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-blue-400 rounded-full" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Intermediate • 65%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C++ -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-300 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24">
+                            <path fill="#00599C"
+                                d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91.167.29.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69.167-.29.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91zM12 19.11c-3.92 0-7.109-3.19-7.109-7.11 0-3.92 3.19-7.11 7.11-7.11a7.133 7.133 0 016.156 3.553l-3.076 1.78a3.567 3.567 0 00-3.08-1.78A3.56 3.56 0 008.444 12 3.56 3.56 0 0012 15.555a3.57 3.57 0 003.08-1.778l3.078 1.78A7.135 7.135 0 0112 19.11zm7.11-6.715h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79v.79zm2.962 0h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79v.79z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">C++</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-blue-600 rounded-full" style="width: 68%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Intermediate • 68%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Java -->
+                <div
+                    class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-red-200 transition-all duration-300 cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24">
+                            <path fill="#007396"
+                                d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 text-lg">Java</h3>
+                            <div class="mt-2 flex items-center justify-center gap-1">
+                                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-red-600 rounded-full" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Intermediate • 70%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="space-y-12">
+            <div class="space-y-4">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900">Projects</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"></div>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Capstone Project -->
+                <div
+                    class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="p-8 lg:p-12 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="px-4 py-1.5 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full">Capstone
+                                / Thesis</span>
+                        </div>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900">
+                            E-Commerce Core Transaction 3: Content Management with Customer Behavior and Trends
+                            Analytics
+                        </h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Web-based application built with Laravel, implementing the Model-View-Controller (MVC)
+                            architecture,
+                            integrated Stripe for payment processing, and implemented role-based access control to
+                            manage user permissions.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-lg">Laravel</span>
+                            <span
+                                class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-lg">PHP</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-lg">MySQL</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-lg">Stripe
+                                API</span>
                         </div>
 
-                        <!-- PHP -->
-                        <div class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-indigo-400/50 rounded-xl px-4 py-2 transition-all">
-                            <div class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-4.652 15.91l-.797-3.481c-.034-.15-.055-.296-.063-.436a.95.95 0 01.003-.202.479.479 0 01.046-.172c.025-.05.062-.09.11-.118.05-.03.115-.045.196-.045h.938c.109 0 .191.013.248.04.057.027.097.067.12.12.024.053.037.12.037.2a1.034 1.034 0 01-.019.194l-.862 3.7h-.957zm5.652-2.348c-.192.757-.534 1.328-1.027 1.715-.493.386-1.185.58-2.075.58h-1.124l-.396 2.053h-1.322l1.553-8h2.675c.743 0 1.303.194 1.68.583.377.388.515.935.414 1.64a3.81 3.81 0 01-.378 1.429zm5.61 2.348l-.797-3.481a2.35 2.35 0 00-.063-.436.945.945 0 01.003-.202.479.479 0 01.046-.172c.025-.05.062-.09.11-.118.05-.03.115-.045.196-.045h.938c.109 0 .191.013.248.04.057.027.097.067.12.12.024.053.037.12.037.2a1.034 1.034 0 01-.019.194l-.862 3.7h-.957z"/>
-                                </svg>
-                                <span class="text-white font-['Inter'] text-xs font-medium">PHP</span>
+                        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/capstone/dashboard-1.png" alt="Dashboard"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Dashboard Overview</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/capstone/dashboard.png" alt="Analytics"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Analytics Dashboard</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/capstone/stripe-invoice.png" alt="Stripe Payment"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Stripe Integration</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/capstone/480401290_1739524306909673_5647657285082023911_n.png"
+                                    alt="User Interface"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Untitled</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/capstone/480442671_1147856046476074_5434626914901438456_n.png"
+                                    alt="Product Management"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Untitled</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/capstone/482034659_1996937364123510_6491390651587333575_n.png"
+                                    alt="Customer Analytics"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Untitled</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- MySQL -->
-                        <div class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-indigo-400/50 rounded-xl px-4 py-2 transition-all">
-                            <div class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4z"/>
-                                </svg>
-                                <span class="text-white font-['Inter'] text-xs font-medium">MySQL</span>
-                            </div>
+                <!-- Internship Project -->
+                <div
+                    class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="p-8 lg:p-12 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full">Internship</span>
+                        </div>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900">
+                            Student Document Management System
+                        </h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Developed a Student Document Management System for the Registrar's Office, restricted to
+                            registrar users. Built with Laravel, Livewire, and Rappasoft for built-in filtering and
+                            search.
+                            Deployed locally for lightweight usage.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-lg">Laravel</span>
+                            <span
+                                class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-lg">Livewire</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-lg">MySQL</span>
+                            <span
+                                class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-medium rounded-lg">Rappasoft</span>
                         </div>
 
-                        <!-- JavaScript -->
-                        <div class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-indigo-400/50 rounded-xl px-4 py-2 transition-all">
-                            <div class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.09.563.315.732.676.775-.507.775-.507 1.316-.844-.203-.314-.304-.451-.439-.586-.473-.528-1.103-.798-2.126-.775l-.528.067c-.507.124-.991.395-1.283.754-.855.968-.611 2.655.427 3.354 1.023.765 2.521.933 2.712 1.653.18.878-.652 1.159-1.475 1.058-.607-.136-.945-.439-1.316-1.002l-1.372.788c.157.359.337.517.607.832 1.305 1.316 4.568 1.249 5.153-.754.021-.067.18-.528.056-1.237l.034.049zm-6.737-5.434h-1.686c0 1.453-.007 2.898-.007 4.354 0 .924.047 1.772-.104 2.033-.247.517-.886.451-1.175.359-.297-.146-.448-.349-.623-.641-.047-.078-.082-.146-.095-.146l-1.368.844c.229.473.563.879.994 1.137.641.383 1.502.507 2.404.305.588-.17 1.095-.519 1.358-1.059.384-.697.302-1.553.299-2.509.008-1.541 0-3.083 0-4.635l.003-.042z"/>
-                                </svg>
-                                <span class="text-white font-['Inter'] text-xs font-medium">JavaScript</span>
+                        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/capstone/480401290_1739524306909673_5647657285082023911_n.png"
+                                    alt="Document Management"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Dummy</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Tailwind CSS -->
-                        <div class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-indigo-400/50 rounded-xl px-4 py-2 transition-all">
-                            <div class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
-                                </svg>
-                                <span class="text-white font-['Inter'] text-xs font-medium">Tailwind</span>
-                            </div>
+                <!-- Personal Project -->
+                <div
+                    class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="p-8 lg:p-12 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="px-4 py-1.5 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full">Personal
+                                Project</span>
+                        </div>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900">
+                            PLAYPIX
+                        </h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Web-based video streaming platform inspired by Netflix, focusing on media handling and
+                            responsive UI design. Features include user authentication, video library management,
+                            cast profiles, and an intuitive admin panel.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-lg">Laravel</span>
+                            <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-xs font-medium rounded-lg">Tailwind
+                                CSS</span>
+                            <span
+                                class="px-3 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded-lg">JavaScript</span>
+                                <span
+                                class="px-3 py-1 bg-slate-50 text-slate-700 text-xs font-medium rounded-lg">Livewire</span>
                         </div>
 
-                        <!-- Bootstrap -->
-                        <div class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-indigo-400/50 rounded-xl px-4 py-2 transition-all">
-                            <div class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z"/>
-                                </svg>
-                                <span class="text-white font-['Inter'] text-xs font-medium">Bootstrap</span>
+                        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/playpix/dashboard.png" alt="Dashboard"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Main Dashboard</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Git -->
-                        <div class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-indigo-400/50 rounded-xl px-4 py-2 transition-all">
-                            <div class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/>
-                                </svg>
-                                <span class="text-white font-['Inter'] text-xs font-medium">Git</span>
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/playpix/client-side-home.png" alt="Client Home"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Client Homepage</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Stripe -->
-                        <div class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-indigo-400/50 rounded-xl px-4 py-2 transition-all">
-                            <div class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/>
-                                </svg>
-                                <span class="text-white font-['Inter'] text-xs font-medium">Stripe</span>
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/playpix/watching-video.png" alt="Video Player"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Video Player</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/playpix/gallery.png" alt="Gallery"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Media Gallery</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/playpix/cast-profile.png" alt="Cast Profile"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Cast Profile</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/playpix/admin-video-info.png" alt="Admin Video"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Admin - Video Info</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/playpix/admin-cast-info.png" alt="Admin Cast"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Admin - Cast Info</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/playpix/admin-cast-management.png" alt="Cast Management"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Cast Management</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative aspect-video rounded-xl overflow-hidden bg-gray-100 cursor-pointer">
+                                <img src="/public/images/playpix/admin-sample-form.png" alt="Admin Form"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div class="absolute bottom-3 left-3 right-3">
+                                        <p class="text-white text-sm font-medium">Admin Form</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-span-1 flex flex-col justify-center space-y-8">
-                <!-- Stats Summary -->
-                <div class="grid grid-cols-2 gap-4 mb-6">
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-all">
-                        <h3 class="text-4xl font-bold text-white font-['Space_Grotesk']">3++</h3>
-                        <p class="text-indigo-300 font-['Inter'] text-sm mt-1">Projects Completed</p>
-                    </div>
+            <div class="text-center pt-8">
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="https://github.com/yourusername" target="_blank" class="btn-white">
+                        <svg class="w-5 h-5 inline-block mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        View on GitHub
+                    </a>
+                    <a href="#projects" class="btn-black">More Projects</a>
+                </div>
+            </div>
+        </section>
 
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-all">
-                        <h3 class="text-4xl font-bold text-white font-['Space_Grotesk']">2+</h3>
-                        <p class="text-indigo-300 font-['Inter'] text-sm mt-1">Years Experience</p>
-                    </div>
-
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-all">
-                        <h3 class="text-4xl font-bold text-white font-['Space_Grotesk']">16+</h3>
-                        <p class="text-indigo-300 font-['Inter'] text-sm mt-1">Technologies</p>
-                    </div>
-
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-all">
-                        <h3 class="text-4xl font-bold text-white font-['Space_Grotesk']">4320++</h3>
-                        <p class="text-indigo-300 font-['Inter'] text-sm mt-1">Hours Contributed</p>
-                    </div>
+        <!-- Education -->
+        <section class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 lg:p-12">
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl text-gray-900 font-bold">Education</h2>
+                    <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full mt-4"></div>
                 </div>
 
                 <div class="space-y-6">
-                    <h2 class="text-indigo-300 font-['Space_Grotesk'] font-medium text-lg uppercase tracking-wider">
-                        Connect With Me
-                    </h2>
+                    <h3 class="text-xl font-semibold text-gray-800">Besklink College of the Philippines</h3>
 
-                    <div class="space-y-4">
-                        <a href="https://github.com/itskendel"
-                           target="_blank"
-                           class="flex items-center gap-4 text-white hover:text-indigo-400 transition-colors group">
-                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center transition-all">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
+                    <div
+                        class="relative space-y-8 before:absolute before:left-2 before:top-2 before:h-[calc(100%-1rem)] before:w-0.5 before:bg-gradient-to-b before:from-blue-600 before:to-indigo-600">
+                        <div class="relative flex gap-6 items-start">
+                            <div
+                                class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-600 ring-4 ring-white shadow-lg z-10">
                             </div>
-                            <div>
-                                <p class="font-['Inter'] text-sm text-slate-400">GitHub</p>
-                                <p class="font-['Inter'] font-medium">@itskendel</p>
-                            </div>
-                        </a>
 
-                        <a href="https://www.linkedin.com/in/ken-jayson-delantar-7b2572370"
-                           target="_blank"
-                           class="flex items-center gap-4 text-white hover:text-indigo-400 transition-colors group">
-                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center  transition-all">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p class="font-['Inter'] text-sm text-slate-400">LinkedIn</p>
-                                <p class="font-['Inter'] font-medium">Ken Delantar</p>
-                            </div>
-                        </a>
+                            <div class="flex-1 pb-8">
+                                <time
+                                    class="inline-block px-3 py-1 text-xs font-semibold text-blue-700 bg-blue-50 rounded-full mb-3">
+                                    2021 - 2025
+                                </time>
 
-                        <a href="https://www.facebook.com/ken.delantar.2025"
-                           target="_blank"
-                           class="flex items-center gap-4 text-white hover:text-indigo-400 transition-colors group">
-                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center transition-all">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p class="font-['Inter'] text-sm text-slate-400">Facebook</p>
-                                <p class="font-['Inter'] font-medium">Ken Delantar</p>
-                            </div>
-                        </a>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Bachelor of Science in Information
+                                    Technology</h4>
 
-                        <a href="mailto:its.kendelantar@gmail.com"
-                           class="flex items-center gap-4 text-white hover:text-indigo-400 transition-colors group">
-                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center  transition-all">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
-                                </svg>
+                                <p class="text-base text-gray-600">
+                                    Major in Information Management
+                                </p>
                             </div>
-                            <div>
-                                <p class="font-['Inter'] text-sm text-slate-400">Email</p>
-                                <p class="font-['Inter'] font-medium text-sm">its.kendelantar@gmail.com</p>
+                        </div>
+
+                        <div class="relative flex gap-6 items-start">
+                            <div
+                                class="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-600 ring-4 ring-white shadow-lg z-10">
                             </div>
-                        </a>
+
+                            <div class="flex-1">
+                                <time
+                                    class="inline-block px-3 py-1 text-xs font-semibold text-indigo-700 bg-indigo-50 rounded-full mb-3">
+                                    2016 - 2018
+                                </time>
+
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Senior High School</h4>
+
+                                <p class="text-base text-gray-600">
+                                    Major in Software Development
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+    
+    <!-- Navigation -->
+    <nav class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+        <div class="bg-white/30 backdrop-blur-lg rounded-full shadow-2xl border border-gray-200 px-8 py-4">
+            <div class="flex items-center gap-8">
+                <!-- Home -->
+                <a href="#"
+                    class="group flex flex-col items-center gap-1 text-neutral-800 hover:text-blue-600 transition-colors"
+                    title="Home">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                </a>
 
-    <section class="min-h-screen content-center bg-white py-20">
-        <div class="grid lg:grid-cols-2 mt-10 lg:px-40 lg:py-10 p-4 gap-10 content-center">
-            <div class="col-span-1 space-y-6">
-                <h1 class="text-slate-900 text-5xl font-['Space_Grotesk'] font-bold mb-8">About me</h1>
+                <!-- Skills -->
+                <a href="#skills"
+                    class="group flex flex-col items-center gap-1 text-neutral-800 hover:text-blue-600 transition-colors"
+                    title="Skills">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                </a>
 
-                <p class="text-xl text-slate-700 font-['Inter'] font-medium mb-6">
-                    Magandang buhay,
-                </p>
+                <!-- Projects -->
+                <a href="#projects"
+                    class="group flex flex-col items-center gap-1 text-neutral-800 hover:text-blue-600 transition-colors"
+                    title="Projects">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z" />
+                    </svg>
+                </a>
 
-                <p class="mb-6 text-base text-slate-600 font-['Inter'] leading-relaxed">
-                    I'm Ken Jayson Delantar, a college graduate with a Bachelor of Science in Information Technology,
-                    majoring in Information Management. I am an aspiring Full Stack Developer with hands-on experience
-                    and
-                    skills in
-                    Laravel, PHP, SQL, and software architecture. I enjoy building scalable and efficient web
-                    applications, and
-                    I
-                    constantly seek to improve my coding practices and stay updated with the latest technologies.
-                </p>
-
-                <p class="mb-6 text-base text-slate-600 font-['Inter'] leading-relaxed">
-                    Beyond programming, I have a passion for creative hobbies such as watching movies and series,
-                    exploring
-                    music,
-                    and learning about design and user experiences. I believe that a balance of work and personal
-                    interests
-                    fuels
-                    creativity and innovation in tech projects.
-                </p>
-
-                <p class="text-base text-slate-600 font-['Inter'] leading-relaxed">
-                    I am always eager to collaborate on exciting projects, take on challenges, and contribute to
-                    building
-                    solutions
-                    that have a meaningful impact.
-                </p>
-            </div>
-
-            <div class="col-span-1 flex items-center justify-center">
-                <div class="w-full h-96 bg-gradient-to-br from-indigo-100 to-violet-100 rounded-2xl flex items-center justify-center">
-                    <span class="text-indigo-400 font-['Space_Grotesk'] text-2xl font-medium">Profile Image</span>
-                </div>
-            </div>
-
-            <hr class="border-indigo-200 col-span-2 border-t-2 mt-16 mb-12">
-
-            <div class="col-span-2 grid lg:grid-cols-3 gap-12 px-5">
-                <div class="col-span-1">
-                    <h1 class="text-xl font-['Space_Grotesk'] font-semibold text-slate-900 mb-5">Education</h1>
-                    <ul class="list-none space-y-3 text-sm text-slate-600 font-['Inter'] leading-relaxed">
-                        <li class="pl-4 border-l-2 border-indigo-300">Bachelor of Science in Information Technology,
-                            major in Information Management at Bestlink College of
-                            the Philippines
-                        </li>
-                        <li class="pl-4 border-l-2 border-indigo-300">Information and Communication Technology, major in
-                            Software Development at Bestlink College of the
-                            Philippines
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-span-1">
-                    <h1 class="text-xl font-['Space_Grotesk'] font-semibold text-slate-900 mb-5">Hobbies &
-                        Interests</h1>
-                    <ul class="list-none space-y-3 text-sm text-slate-600 font-['Inter'] leading-relaxed">
-                        <li class="pl-4 border-l-2 border-violet-300">Watching movies and series</li>
-                        <li class="pl-4 border-l-2 border-violet-300">Exploring music and creative arts</li>
-                        <li class="pl-4 border-l-2 border-violet-300">Learning about design, user experience, and tech
-                            trends
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-span-1">
-                    <h1 class="text-xl font-['Space_Grotesk'] font-semibold text-slate-900 mb-5">Goals &
-                        Collaboration</h1>
-                    <ul class="list-none space-y-3 text-sm text-slate-600 font-['Inter'] leading-relaxed">
-                        <li class="pl-4 border-l-2 border-blue-300">Eager to collaborate on exciting projects</li>
-                        <li class="pl-4 border-l-2 border-blue-300">Open to challenges and problem-solving
-                            opportunities
-                        </li>
-                        <li class="pl-4 border-l-2 border-blue-300">Committed to building impactful and meaningful
-                            solutions
-                        </li>
-                    </ul>
-                </div>
+                <!-- Education -->
+                <a href="#education"
+                    class="group flex flex-col items-center gap-1 text-neutral-800 hover:text-blue-600 transition-colors"
+                    title="Education">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                </a>
             </div>
         </div>
-    </section>
-
-    <section class="bg-slate-50 py-20 lg:px-40 lg:py-20 px-6">
-        <div class="mb-16">
-            <h1 class="text-slate-900 text-5xl font-['Space_Grotesk'] font-bold mb-4">Featured Projects</h1>
-            <p class="text-slate-600 font-['Inter'] text-lg">A selection of my recent work</p>
-        </div>
-
-        <div class="space-y-20">
-            <!-- Project 01 -->
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-                <div class="col-span-1 bg-gradient-to-br from-indigo-100 to-violet-100 p-6 rounded-2xl">
-                    <div class="grid grid-cols-2 gap-3">
-                        <img src="./public/images/core3/480804400_526114123830872_8341101495875969672_n.png"
-                             alt="CORE3 Screenshot 3"
-                             class="w-full h-48 object-cover rounded-lg shadow-md">
-                        <img src="./public/images/core3/481145056_631311779494107_3770088957523355159_n.png"
-                             alt="CORE3 Screenshot 4"
-                             class="w-full h-48 object-cover rounded-lg shadow-md">
-                        <img src="./public/images/core3/481666446_1141534784271573_6082360184541191417_n.png"
-                             alt="CORE3 Screenshot 5"
-                             class="w-full h-48 object-cover rounded-lg shadow-md">
-                        <img src="./public/images/core3/482034659_1996937364123510_6491390651587333575_n.png"
-                             alt="CORE3 Screenshot 6"
-                             class="w-full h-48 object-cover rounded-lg shadow-md">
-                    </div>
-                </div>
-
-                <div class="col-span-1 flex flex-col gap-6 h-fit">
-                    <div class="inline-flex items-baseline gap-4">
-                        <span class="text-indigo-200 text-6xl font-bold font-['Space_Grotesk']">01</span>
-                        <h2 class="text-slate-900 text-2xl font-['Space_Grotesk'] font-bold leading-tight">
-                            E-COMMERCE CORE TRANSACTION
-                        </h2>
-                    </div>
-
-                    <p class="text-slate-600 font-['Inter'] text-base leading-relaxed">
-                        Content Management with Customer Behavior and Trends Analytics
-                    </p>
-
-                    <ul class="space-y-3 text-slate-600 font-['Inter'] text-sm">
-                        <li class="flex items-start gap-3">
-                            <span class="text-indigo-500 mt-1">✓</span>
-                            <span>Capstone project completed during my final year at BCP</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-indigo-500 mt-1">✓</span>
-                            <span>Developed using Laravel and PHP with MySQL database</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-indigo-500 mt-1">✓</span>
-                            <span>Integrated Stripe Payment API for secure transactions</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-indigo-500 mt-1">✓</span>
-                            <span>Implemented customer behavior analytics and trends dashboard</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Project 02 -->
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-                <div class="col-span-1 order-2 lg:order-1 flex flex-col gap-6">
-                    <div class="inline-flex items-baseline gap-4">
-                        <span class="text-violet-200 text-6xl font-bold font-['Space_Grotesk']">02</span>
-                        <h2 class="text-slate-900 text-2xl font-['Space_Grotesk'] font-bold leading-tight">
-                            FILE MANAGEMENT SYSTEM
-                        </h2>
-                    </div>
-
-                    <ul class="space-y-3 text-slate-600 font-['Inter'] text-sm">
-                        <li class="flex items-start gap-3">
-                            <span class="text-violet-500 mt-1">✓</span>
-                            <span>Developed during on-the-job training at Registrar Office, BCP</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-violet-500 mt-1">✓</span>
-                            <span>Built with Laravel, PHP, and MySQL</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-violet-500 mt-1">✓</span>
-                            <span>Digital storage, retrieval, and organization of student files</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-violet-500 mt-1">✓</span>
-                            <span>Search and filter features for quick document management</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-span-1 order-1 lg:order-2 bg-gradient-to-br from-violet-100 to-purple-100 p-8 rounded-2xl min-h-[400px] flex items-center justify-center">
-                    <span class="text-violet-400 font-['Space_Grotesk'] text-xl">Project Screenshot</span>
-                </div>
-            </div>
-
-            <!-- Project 03 -->
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-                <div class="col-span-1 bg-gradient-to-br from-blue-100 to-indigo-100 p-8 rounded-2xl min-h-[400px] flex items-center justify-center">
-                    <span class="text-blue-400 font-['Space_Grotesk'] text-xl">Project Screenshot</span>
-                </div>
-
-                <div class="col-span-1 flex flex-col gap-6">
-                    <div class="inline-flex items-baseline gap-4">
-                        <span class="text-blue-200 text-6xl font-bold font-['Space_Grotesk']">03</span>
-                        <h2 class="text-slate-900 text-2xl font-['Space_Grotesk'] font-bold leading-tight">
-                            E-COMMERCE WEB APPLICATION (MDesserts)
-                        </h2>
-                    </div>
-
-                    <ul class="space-y-3 text-slate-600 font-['Inter'] text-sm">
-                        <li class="flex items-start gap-3">
-                            <span class="text-blue-500 mt-1">✓</span>
-                            <span>Web application for an online dessert store</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-blue-500 mt-1">✓</span>
-                            <span>Developed using Laravel, PHP, and MySQL</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-blue-500 mt-1">✓</span>
-                            <span>User registration, product catalog, and order tracking</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-blue-500 mt-1">✓</span>
-                            <span>Responsive design with modern UI and mobile-friendly layout</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex justify-center gap-4 mt-16">
-            <a href=""
-               class="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-['Inter'] font-medium text-sm rounded-lg transition-all shadow-lg shadow-indigo-500/30">
-                VIEW ALL PROJECTS
-            </a>
-            <button class="px-8 py-3 bg-white hover:bg-slate-50 text-slate-900 font-['Inter'] font-medium text-sm rounded-lg transition-all border border-slate-300">
-                GITHUB
-            </button>
-        </div>
-    </section>
-
-    <footer class="bg-slate-900 lg:px-40 lg:py-16 px-6 py-12">
-        <div class="flex flex-wrap justify-between items-start gap-10">
-            <div class="h-fit">
-                <h1 class="inline-flex flex-col mb-4">
-                    <span class="font-medium font-['Space_Grotesk'] text-lg text-indigo-400 uppercase tracking-[0.2em]">
-                        DELANTAR
-                    </span>
-                    <span class="font-bold font-['Space_Grotesk'] text-5xl text-white">
-                        KEN
-                    </span>
-                </h1>
-                <p class="text-slate-400 font-['Inter'] text-sm max-w-xs">
-                    Full Stack Developer passionate about building elegant solutions to complex problems.
-                </p>
-            </div>
-
-            <div class="space-y-4">
-                <h1 class="text-white text-sm font-['Space_Grotesk'] font-semibold uppercase tracking-wider">Quick
-                    Links</h1>
-                <ul class="text-slate-400 font-['Inter'] text-sm space-y-3">
-                    <li><a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a></li>
-                    <li><a href="" class="hover:text-indigo-400 transition-colors">Projects</a></li>
-                    <li><a href="skill.html" class="hover:text-indigo-400 transition-colors">Skills</a></li>
-                </ul>
-            </div>
-
-            <div class="space-y-4">
-                <h1 class="text-white text-sm font-['Space_Grotesk'] font-semibold uppercase tracking-wider">
-                    Contact</h1>
-                <div class="space-y-3 font-['Inter']">
-                    <a href="mailto:its.kendelantar@gmail.com"
-                       class="flex items-start gap-3 text-sm hover:text-indigo-400 transition-colors">
-                        <span class="text-slate-500">Email:</span>
-                        <span class="text-slate-400">its.kendelantar@gmail.com</span>
-                    </a>
-                    <a href="https://www.facebook.com/ken.delantar.2025"
-                       class="flex items-start gap-3 text-sm hover:text-indigo-400 transition-colors">
-                        <span class="text-slate-500">Facebook:</span>
-                        <span class="text-slate-400">Ken Delantar</span>
-                    </a>
-                    <a href="tel:+639851066388"
-                       class="flex items-start gap-3 text-sm hover:text-indigo-400 transition-colors">
-                        <span class="text-slate-500">Phone:</span>
-                        <span class="text-slate-400">+63 9851066388</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Overlay Menu -->
-    <menu id="menu" hidden
-          class="h-screen w-screen bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 fixed z-50 top-0 left-0">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:px-24 lg:py-24 p-10 relative h-full">
-            <button onclick="menu.hidden^=1"
-                    class="absolute top-8 right-8 text-white font-['Inter'] font-medium text-sm hover:text-indigo-200 transition-colors px-6 py-3 border border-white/30 rounded-lg backdrop-blur-sm">
-                CLOSE
-            </button>
-
-            <div class="flex flex-col justify-between">
-                <div>
-                    <h1 class="inline-flex flex-col mb-16">
-                        <span class="font-['Space_Grotesk'] text-white text-5xl font-medium tracking-[0.25em] uppercase">Delantar</span>
-                        <span class="font-['Space_Grotesk'] text-white text-[8rem] font-bold leading-none">Ken</span>
-                    </h1>
-
-                    <div class="mt-20">
-                        <p class="font-['Space_Grotesk'] text-white/80 text-2xl font-semibold mb-4 tracking-wide uppercase">
-                            Address</p>
-                        <p class="font-['Inter'] text-white text-lg leading-relaxed">Brgy. 176, Caloocan City</p>
-                        <p class="font-['Inter'] text-white text-lg leading-relaxed">Philippines, 1428</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col justify-center">
-                <ul class="space-y-8 text-right">
-                    <li><a href="index.html"
-                           class="font-['Space_Grotesk'] text-white text-6xl font-bold tracking-tight hover:text-indigo-200 transition-colors inline-block">Home</a>
-                    </li>
-                    <li><a href=""
-                           class="font-['Space_Grotesk'] text-white text-6xl font-bold tracking-tight hover:text-indigo-200 transition-colors inline-block">Projects</a>
-                    </li>
-                    <li><a href="skill.html"
-                           class="font-['Space_Grotesk'] text-white text-6xl font-bold tracking-tight hover:text-indigo-200 transition-colors inline-block">Skills</a>
-                    </li>
-                    <li>
-                </ul>
-            </div>
-        </div>
-
-        <footer class="absolute bottom-8 left-0 w-full px-10 text-white/70 flex justify-between items-center text-xs uppercase tracking-widest font-['Inter']">
-            <p>&copy; 2025 Ken Delantar. All rights reserved.</p>
-            <div class="flex space-x-8">
-                <a href="https://www.linkedin.com/in/ken-jayson-delantar-7b2572370" class="hover:text-white transition-colors">LinkedIn</a>
-                <a href="https://github.com/itskendel" class="hover:text-white transition-colors">GitHub</a>
-                <a href="mailto:itskendelantar@gmail.com" class="hover:text-white transition-colors">Email</a>
-            </div>
-        </footer>
-    </menu>
-</div>
+    </nav>
 </body>
 
 </html>

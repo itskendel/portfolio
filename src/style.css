@@ -1,27 +1,93 @@
 @import "tailwindcss";
 
-/* Define CSS variables for fonts */
-@theme {
-  --font-headings: "Poppins", sans-serif;
-  --font-sans: "Roboto", sans-serif;
-}
-
 body {
   @apply antialiased;
 }
 
-.bg-primary {
-  @apply bg-[#EEEEED];
+body::-webkit-scrollbar {
+  width: 5px;
 }
 
-.btn-primary {
-  @apply px-10 py-3 rounded bg-neutral-900 text-white text-xs font-mono font-medium hover:bg-neutral-500;
+body::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+  border-radius: 10px;
 }
 
-.btn-secondary {
-  @apply px-10 py-3 rounded bg-white text-neutral-900 text-xs font-mono font-medium hover:bg-neutral-200;
+body::-webkit-scrollbar-thumb {
+  background-color: #4f46e5;
+  border-radius: 10px;
 }
 
-.btn-tertiary{
-  @apply px-10 py-3 rounded bg-rose-600 text-white text-xs font-mono font-medium hover:bg-rose-800;
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #4338ca;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.label {
+  @apply block mb-2 text-sm font-medium text-white uppercase
+}
+
+.input-text {
+  @apply block w-full py-2 px-4 rounded-lg bg-gray-700 border-gray-600 placeholder-gray-400 text-white/60 focus:ring-blue-500 focus:border-blue-500
+}
+
+.input-file {
+  @apply relative w-full h-11 border border-gray-700 rounded-lg text-gray-300 bg-gray-800 cursor-pointer overflow-hidden;
+}
+
+.input-file::file-selector-button {
+  @apply bg-black/50 hover:bg-black/80 text-white/70 text-xs uppercase font-medium px-4 h-full cursor-pointer border-0 rounded-r-lg transition-colors;
+}
+
+.input-file::before {
+  content: attr(data-placeholder);
+  @apply absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none;
+}
+
+
+/* ...existing code... */
+
+/* blue */
+.btn-blue {
+  @apply inline-flex items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-500 active:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition ease-in-out duration-150 text-nowrap;
+}
+
+.btn-indigo {
+  @apply inline-flex items-center px-4 py-2 bg-indigo-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-indigo-500 active:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150 text-nowrap;
+}
+
+.btn-yellow {
+  @apply inline-flex items-center px-4 py-2 bg-yellow-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-yellow-500 active:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition ease-in-out duration-150 text-nowrap;
+}
+
+/* red */
+.btn-red {
+  @apply inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150 text-nowrap;
+}
+
+/* white */
+.btn-white {
+  @apply inline-flex items-center px-4 py-2 bg-white border border-transparent rounded-md font-semibold text-xs text-gray-900 uppercase tracking-widest hover:bg-gray-200 active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-50 focus:ring-offset-2 transition ease-in-out duration-150 text-nowrap;
+}
+
+/* black */
+.btn-black {
+  @apply inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150 text-nowrap;
+}
+
+/* Add sizes variants if needed */
+.btn-sm {
+  @apply px-3 py-1.5 text-xs;
+}
+
+.btn-lg {
+  @apply px-6 py-3 text-base;
 }

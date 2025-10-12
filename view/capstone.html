@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Platform - Ken Jayson Delantar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+
+    <style>
+        .image-modal {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-50 antialiased">
+    <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-40 border-b border-neutral-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="../index.html"
+                    class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Back
+                </a>
+                <a href="#footer" class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors">
+                    Get in touch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <span class="inline-block px-3 py-1 text-xs font-medium text-blue-700 bg-blue-50 rounded-full mb-6">
+                CAPSTONE PROJECT
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-neutral-900 mb-6">
+                E-Commerce Core Transaction 3
+            </h1>
+            <p class="text-xl sm:text-2xl text-neutral-600 leading-relaxed mb-8 max-w-3xl">
+                Content Management with Customer Behavior and Trends Analytics
+            </p>
+
+            <div class="flex flex-wrap gap-3 mb-12">
+                <span
+                    class="px-4 py-2 text-sm bg-white text-neutral-700 border border-neutral-200 rounded-sm">Laravel</span>
+                <span
+                    class="px-4 py-2 text-sm bg-white text-neutral-700 border border-neutral-200 rounded-sm">PHP</span>
+                <span
+                    class="px-4 py-2 text-sm bg-white text-neutral-700 border border-neutral-200 rounded-sm">MySQL</span>
+                <span class="px-4 py-2 text-sm bg-white text-neutral-700 border border-neutral-200 rounded-sm">Stripe
+                    API</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2 space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-medium text-neutral-900 mb-4">Project Overview</h2>
+                        <div class="space-y-4 text-neutral-600 leading-relaxed">
+                            <p>
+                                A web-based e-commerce app built with Laravel using the MVC structure.
+                                It includes secure transaction handling and simple analytics to help track customer
+                                activity and sales trends.
+                            </p>
+                            <p>
+                                The system uses Stripe for secure payments and has role-based access to manage different
+                                user permissions.
+                                It’s built to handle e-commerce tasks smoothly while staying safe.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-medium text-neutral-900 mb-4">Key Features</h2>
+                        <ul class="space-y-3 text-neutral-600">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-neutral-900 mt-0.5 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Integrated Stripe payment gateway for secure transactions</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-neutral-900 mt-0.5 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Customer behavior analytics and trend visualization</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-neutral-900 mt-0.5 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Role-based access control for different user levels</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-neutral-900 mt-0.5 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Content management system for products and categories</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-neutral-900 mt-0.5 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Comprehensive dashboard</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-neutral-50 p-6 rounded-sm border border-neutral-200">
+                        <h3 class="text-sm font-medium text-neutral-500 mb-4 tracking-wide">PROJECT INFO</h3>
+                        <dl class="space-y-4">
+                            <div>
+                                <dt class="text-xs text-neutral-500 mb-1">Type</dt>
+                                <dd class="text-sm text-neutral-900">Capstone / Thesis</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs text-neutral-500 mb-1">Duration</dt>
+                                <dd class="text-sm text-neutral-900">Year</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs text-neutral-500 mb-1">Role</dt>
+                                <dd class="text-sm text-neutral-900">Group Leader/Developer</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs text-neutral-500 mb-1">Year</dt>
+                                <dd class="text-sm text-neutral-900">2024 - 2025</dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <div class="bg-neutral-50 p-6 rounded-sm border border-neutral-200">
+                        <h3 class="text-sm font-medium text-neutral-500 mb-4 tracking-wide">TECHNOLOGIES</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <h4 class="text-xs text-neutral-500 mb-2">Backend</h4>
+                                <p class="text-sm text-neutral-900">Laravel, PHP, MySQL</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-neutral-500 mb-2">Frontend</h4>
+                                <p class="text-sm text-neutral-900">Blade, JavaScript, CSS, Bootstrap</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-neutral-500 mb-2">Integration</h4>
+                                <p class="text-sm text-neutral-900">Stripe API</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl font-medium text-neutral-900 mb-8">Project Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Image 1 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(0)">
+                    <img src="/public/images/capstone/dashboard-1.png" alt="Dashboard Overview"
+                        class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Dashboard Overview</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Main analytics dashboard with key metrics</p>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(1)">
+                    <img src="/public/images/capstone/dashboard.png" alt="Analytics Dashboard"
+                        class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Analytics Dashboard</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Detailed analytics and reporting interface</p>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(2)">
+                    <img src="/public/images/capstone/stripe-invoice.png" alt="Stripe Integration"
+                        class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Stripe Integration</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Payment processing and invoice generation</p>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(3)">
+                    <img src="/public/images/capstone/480401290_1739524306909673_5647657285082023911_n.png"
+                        alt="User Interface" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">User Interface</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Clean and intuitive interface design</p>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(4)">
+                    <img src="/public/images/capstone/480442671_1147856046476074_5434626914901438456_n.png"
+                        alt="Product Management" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Product Management</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Product catalog and inventory management</p>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(5)">
+                    <img src="/public/images/capstone/482034659_1996937364123510_6491390651587333575_n.png"
+                        alt="Customer Analytics" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Customer Analytics</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Customer behavior tracking and insights</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="py-8 border-t border-neutral-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
+                <p>© 2025 Ken Jayson Delantar</p>
+                <div class="flex items-center gap-6">
+                    <a href="https://github.com/itskendel" target="_blank"
+                        class="hover:text-neutral-900 transition-colors">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ken-jayson-delantar-7b2572370" target="_blank"
+                        class="hover:text-neutral-900 transition-colors">LinkedIn</a>
+                    <a href="mailto:its.kendelantar@gmail.com"
+                        class="hover:text-neutral-900 transition-colors">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const images = [
+            '/public/images/capstone/dashboard-1.png',
+            '/public/images/capstone/dashboard.png',
+            '/public/images/capstone/stripe-invoice.png',
+            '/public/images/capstone/480401290_1739524306909673_5647657285082023911_n.png',
+            '/public/images/capstone/480442671_1147856046476074_5434626914901438456_n.png',
+            '/public/images/capstone/482034659_1996937364123510_6491390651587333575_n.png'
+        ];
+
+        function openModal(index) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = images[index];
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

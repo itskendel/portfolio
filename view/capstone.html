@@ -270,7 +270,7 @@
     <footer id="footer" class="py-8 border-t border-neutral-200">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
-                <p>© 2025 Ken Jayson Delantar</p>
+                <p>© 2026 Ken Jayson Delantar</p>
                 <div class="flex items-center gap-6">
                     <a href="https://github.com/itskendel" target="_blank"
                         class="hover:text-neutral-900 transition-colors">GitHub</a>
@@ -283,20 +283,21 @@
         </div>
     </footer>
 
-    <script>
-        const images = [
-            '/public/images/capstone/dashboard-1.png',
-            '/public/images/capstone/dashboard.png',
-            '/public/images/capstone/stripe-invoice.png',
-            '/public/images/capstone/480401290_1739524306909673_5647657285082023911_n.png',
-            '/public/images/capstone/480442671_1147856046476074_5434626914901438456_n.png',
-            '/public/images/capstone/482034659_1996937364123510_6491390651587333575_n.png'
-        ];
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 sm:p-8 cursor-zoom-out"
+        onclick="closeModal()">
+        <img id="modalImage" src="" alt="Image preview"
+            class="max-w-full max-h-full object-contain cursor-default rounded-sm" onclick="event.stopPropagation()">
+        <button onclick="closeModal()" aria-label="Close"
+            class="absolute top-4 right-4 text-white/80 hover:text-white text-4xl leading-none cursor-pointer transition-colors">&times;</button>
+    </div>
 
+    <script>
         function openModal(index) {
             const modal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
-            modalImage.src = images[index];
+            const item = document.querySelectorAll('.gallery-item')[index];
+            modalImage.src = item.querySelector('img').src;
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }

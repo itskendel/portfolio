@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayPix Streaming</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: #f3f4f6;
+            border-radius: 10px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #8b5cf6;
+            border-radius: 10px;
+        }
+
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: #7c3aed;
+        }
+
+        .image-modal {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-50 antialiased">
+    <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-40 border-b border-neutral-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="../index.html"
+                    class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Back
+                </a>
+                <a href="#footer" class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors">
+                    Get in touch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <span class="inline-block px-3 py-1 text-xs font-medium text-purple-700 bg-purple-50 rounded-full mb-6">
+                PERSONAL PROJECT
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-neutral-900 mb-6">
+                PLAYPIX Streaming
+            </h1>
+            <p class="text-xl sm:text-2xl text-neutral-600 leading-relaxed mb-8 max-w-3xl">
+                A Netflix-inspired video streaming platform with user authentication and media library management
+            </p>
+
+            <div class="flex flex-wrap gap-3 mb-12">
+                <span
+                    class="px-4 py-2 text-sm bg-white text-neutral-700 border border-neutral-200 rounded-sm">Laravel</span>
+                <span
+                    class="px-4 py-2 text-sm bg-white text-neutral-700 border border-neutral-200 rounded-sm">MySQL</span>
+                <span class="px-4 py-2 text-sm bg-white text-neutral-700 border border-neutral-200 rounded-sm">Tailwind
+                    CSS</span>
+                <span
+                    class="px-4 py-2 text-sm bg-white text-neutral-700 border border-neutral-200 rounded-sm">JavaScript</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2 space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-medium text-neutral-900 mb-4">Project Overview</h2>
+                        <div class="space-y-4 text-neutral-600 leading-relaxed">
+                            <p>
+                                PLAYPIX is a video streaming web application built with Laravel that brings a
+                                Netflix-like experience to browsing and watching content. It covers the full journey of
+                                a media platform — from discovering titles in a gallery to streaming them in a
+                                dedicated player.
+                            </p>
+                            <p>
+                                The system includes user authentication, a media library, cast profiles, and a complete
+                                admin panel for managing videos and cast members. It’s designed to make both viewers
+                                and content managers feel right at home.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-medium text-neutral-900 mb-4">Key Features</h2>
+                        <ul class="space-y-3 text-neutral-600">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-neutral-900 mt-0.5 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>User authentication and account management</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-neutral-900 mt-0.5 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Media library and browsing gallery</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-neutral-900 mt-0.5 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Dedicated video streaming player</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-neutral-900 mt-0.5 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Cast profiles and cast management</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-neutral-900 mt-0.5 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Admin panel for media and content management</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-medium text-neutral-900 mb-4">Impact</h2>
+                        <div class="space-y-4 text-neutral-600 leading-relaxed">
+                            <p>
+                                This project put the full streaming stack into practice — from setting up
+                                authentication and media workflows to building an intuitive admin interface. It
+                                strengthened my skills in Laravel development, database design, and crafting
+                                user-friendly interfaces for both clients and administrators.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-neutral-50 p-6 rounded-sm border border-neutral-200">
+                        <h3 class="text-sm font-medium text-neutral-500 mb-4 tracking-wide">PROJECT INFO</h3>
+                        <dl class="space-y-4">
+                            <div>
+                                <dt class="text-xs text-neutral-500 mb-1">Type</dt>
+                                <dd class="text-sm text-neutral-900">Personal Project</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs text-neutral-500 mb-1">Role</dt>
+                                <dd class="text-sm text-neutral-900">Full-Stack Developer</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs text-neutral-500 mb-1">Category</dt>
+                                <dd class="text-sm text-neutral-900">Video Streaming</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs text-neutral-500 mb-1">Platform</dt>
+                                <dd class="text-sm text-neutral-900">Web Application</dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <div class="bg-neutral-50 p-6 rounded-sm border border-neutral-200">
+                        <h3 class="text-sm font-medium text-neutral-500 mb-4 tracking-wide">TECHNOLOGIES</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <h4 class="text-xs text-neutral-500 mb-2">Backend</h4>
+                                <p class="text-sm text-neutral-900">Laravel, PHP, MySQL</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-neutral-500 mb-2">Frontend</h4>
+                                <p class="text-sm text-neutral-900">Tailwind CSS, JavaScript</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-neutral-500 mb-2">Build</h4>
+                                <p class="text-sm text-neutral-900">Vite</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl font-medium text-neutral-900 mb-8">Project Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Image 1 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(0)">
+                    <img src="/public/images/playpix/dashboard.png" alt="Admin Dashboard"
+                        class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Admin Dashboard</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Main dashboard with platform statistics</p>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(1)">
+                    <img src="/public/images/playpix/client-side-home.png" alt="Client Home"
+                        class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Client Home</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Streaming home page with featured content</p>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(2)">
+                    <img src="/public/images/playpix/watching-video.png" alt="Video Player"
+                        class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Video Player</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Dedicated video streaming player view</p>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(3)">
+                    <img src="/public/images/playpix/gallery.png" alt="Media Gallery" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Media Gallery</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Browse the media library and titles</p>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(4)">
+                    <img src="/public/images/playpix/cast-profile.png" alt="Cast Profile"
+                        class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Cast Profile</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Detailed cast member profile page</p>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(5)">
+                    <img src="/public/images/playpix/admin-cast-management.png" alt="Cast Management"
+                        class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Cast Management</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Admin management for cast members</p>
+                    </div>
+                </div>
+
+                <!-- Image 7 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(6)">
+                    <img src="/public/images/playpix/admin-cast-info.png" alt="Cast Details"
+                        class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Cast Details</h3>
+                        <p class="text-xs text-neutral-500 mt-1">View and edit detailed cast information</p>
+                    </div>
+                </div>
+
+                <!-- Image 8 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(7)">
+                    <img src="/public/images/playpix/admin-video-info.png" alt="Video Info"
+                        class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Video Info</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Media information and metadata management</p>
+                    </div>
+                </div>
+
+                <!-- Image 9 -->
+                <div class="gallery-item bg-white rounded-sm overflow-hidden border border-neutral-200"
+                    onclick="openModal(8)">
+                    <img src="/public/images/playpix/admin-sample-form.png" alt="Admin Form"
+                        class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-neutral-900">Admin Form</h3>
+                        <p class="text-xs text-neutral-500 mt-1">Form for creating and updating content</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="py-8 border-t border-neutral-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
+                <p>© 2026 Ken Jayson Delantar</p>
+                <div class="flex items-center gap-6">
+                    <a href="https://github.com/itskendel" target="_blank"
+                        class="hover:text-neutral-900 transition-colors">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ken-jayson-delantar-7b2572370" target="_blank"
+                        class="hover:text-neutral-900 transition-colors">LinkedIn</a>
+                    <a href="mailto:its.kendelantar@gmail.com"
+                        class="hover:text-neutral-900 transition-colors">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 sm:p-8 cursor-zoom-out"
+        onclick="closeModal()">
+        <img id="modalImage" src="" alt="Image preview"
+            class="max-w-full max-h-full object-contain cursor-default rounded-sm" onclick="event.stopPropagation()">
+        <button onclick="closeModal()" aria-label="Close"
+            class="absolute top-4 right-4 text-white/80 hover:text-white text-4xl leading-none cursor-pointer transition-colors">&times;</button>
+    </div>
+
+    <script>
+        function openModal(index) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const item = document.querySelectorAll('.gallery-item')[index];
+            modalImage.src = item.querySelector('img').src;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -15,6 +15,7 @@ export default defineConfig({
                 index: '/index.html',
                 capstone: '/view/capstone.html',
                 internship: '/view/internship.html',
+                playpix: '/view/playpix.html',
             }
         }
     }
